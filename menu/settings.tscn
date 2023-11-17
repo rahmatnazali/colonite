@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://svuyycpd10mr"]
+
+[ext_resource type="Script" path="res://menu/settings.gd" id="1_865b4"]
+[ext_resource type="PackedScene" uid="uid://cntiwueyltayq" path="res://menu/menu_background.tscn" id="1_rq0hh"]
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="3_gauyk"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_865b4")
+
+[node name="MenuBackground" parent="." instance=ExtResource("1_rq0hh")]
+layout_mode = 1
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_top = 20.0
+offset_right = 500.0
+offset_bottom = 608.0
+grow_horizontal = 2
+theme_override_constants/separation = 30
+
+[node name="Title" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="SettingsContainer" type="VBoxContainer" parent="MainContainer"]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/SettingsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Label" type="Label" parent="MainContainer/SettingsContainer/HBoxContainer"]
+layout_mode = 2
+text = "Full screen"
+
+[node name="FullScreenCheckButton" type="CheckButton" parent="MainContainer/SettingsContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="BackButtonScene" parent="." instance=ExtResource("3_gauyk")]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 20.0
+offset_right = 138.0
+offset_bottom = 51.0
+text = "Back"
+target_scene = "res://menu/main_menu.tscn"
+
+[connection signal="toggled" from="MainContainer/SettingsContainer/HBoxContainer/FullScreenCheckButton" to="." method="_on_full_screen_check_button_toggled"]

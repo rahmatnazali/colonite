@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1i05l80n55vk"]
+
+[ext_resource type="Texture2D" uid="uid://8p31lja401do" path="res://assets/icon.svg" id="1_b78n4"]
+[ext_resource type="Script" path="res://menu/main_menu.gd" id="1_h2g7h"]
+[ext_resource type="PackedScene" uid="uid://cntiwueyltayq" path="res://menu/menu_background.tscn" id="1_hr51q"]
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="4_ff1qp"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h2g7h")
+
+[node name="MenuBackground" parent="." instance=ExtResource("1_hr51q")]
+layout_mode = 1
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -79.0
+offset_right = 64.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="HeadingContainer" type="VBoxContainer" parent="Container"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="BrandingIcon" type="TextureRect" parent="Container/HeadingContainer"]
+layout_mode = 2
+texture = ExtResource("1_b78n4")
+expand_mode = 4
+
+[node name="Title" type="Label" parent="Container/HeadingContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Godot 4.1.3 Template"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="Container"]
+layout_mode = 2
+
+[node name="StartButtonScene" parent="Container/ButtonContainer" instance=ExtResource("4_ff1qp")]
+layout_mode = 2
+text = "Start"
+target_scene = "res://levels/level_1.tscn"
+
+[node name="HowToPlayButtonScene" parent="Container/ButtonContainer" instance=ExtResource("4_ff1qp")]
+layout_mode = 2
+text = "How to Play"
+target_scene = "res://menu/how_to_play.tscn"
+
+[node name="SettingsButtonScene" parent="Container/ButtonContainer" instance=ExtResource("4_ff1qp")]
+layout_mode = 2
+text = "Settings"
+target_scene = "res://menu/settings.tscn"
