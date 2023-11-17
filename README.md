@@ -1,1 +1,1 @@
-Template for Godot 4.1.3 project.
+Game project for Game Off 2023
