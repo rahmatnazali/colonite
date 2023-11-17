@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cng8yewksr3xk"]
+
+[ext_resource type="Script" path="res://components/unit/base_unit.gd" id="1_0uss8"]
+[ext_resource type="Texture2D" uid="uid://bt0jajm413vkn" path="res://assets/base_body.png" id="2_2kicu"]
+[ext_resource type="Texture2D" uid="uid://dd18e3tcx58d1" path="res://assets/base_border.png" id="3_ulfta"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ftc2b"]
+radius = 6.0
+
+[node name="BaseUnit" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_0uss8")
+
+[node name="Body" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_2kicu")
+
+[node name="Eye" type="Sprite2D" parent="."]
+position = Vector2(2.27374e-13, -3)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_2kicu")
+
+[node name="Barrier" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_ulfta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_ftc2b")
