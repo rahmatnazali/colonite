@@ -31,13 +31,14 @@ func initialize_color():
 	$Barrier.modulate = BARRIER_COLOR
 
 
-func initialize_physic():
+func calculate_movement_parameter():
 	set_direction_from_rotation()
 	set_velocity(DIRECTION * SPEED)
 
 
 func handle_movement():
 	if should_move:
+		calculate_movement_parameter()
 		var is_collided = move_and_slide()
 		if should_stop_on_collide and is_collided:
 			stop_moving()
@@ -45,7 +46,7 @@ func handle_movement():
 
 func _ready():
 	initialize_color()
-	initialize_physic()
+	calculate_movement_parameter()
 
 
 func _physics_process(_delta):
