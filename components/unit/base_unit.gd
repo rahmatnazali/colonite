@@ -40,5 +40,5 @@ func _ready():
 	initialize_physic()
 
 
-func _process(_delta):
+func _physics_process(_delta):
 	handle_movement()
