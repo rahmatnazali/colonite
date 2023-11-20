@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c45il80rtcxjf"]
+[gd_scene load_steps=3 format=3 uid="uid://c45il80rtcxjf"]
 
 [ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit.tscn" id="1_umg4p"]
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="2_2q1h4"]
 
 [node name="base_unit_1_appearance" type="Control"]
 layout_mode = 3
@@ -26,3 +27,14 @@ horizontal_alignment = 1
 [node name="BaseUnit" parent="." instance=ExtResource("1_umg4p")]
 position = Vector2(583, 197)
 scale = Vector2(7.76, 7.76)
+
+[node name="ButtonScene" parent="." instance=ExtResource("2_2q1h4")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Next"
+target_scene = "res://debug/base_unit_2_movement.tscn"

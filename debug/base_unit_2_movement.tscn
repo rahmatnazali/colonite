@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://mbcgw6vjj2wc"]
+[gd_scene load_steps=4 format=3 uid="uid://mbcgw6vjj2wc"]
 
 [ext_resource type="Script" path="res://debug/base_unit_2_movement.gd" id="1_kmqbt"]
 [ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit.tscn" id="2_yb8a0"]
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="3_21b87"]
 
 [node name="base_unit_1_movement" type="Control"]
 layout_mode = 3
@@ -76,3 +77,14 @@ position = Vector2(597, 360)
 rotation = 2.35619
 should_move = true
 SPEED = 100
+
+[node name="ButtonScene" parent="." instance=ExtResource("3_21b87")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Next"
+target_scene = "res://debug/base_unit_3_collision.tscn"
