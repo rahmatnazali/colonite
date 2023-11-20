@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq84ca0abiawl"]
+
+[ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit.tscn" id="1_1mtdl"]
+
+[node name="base_unit_3_collision" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -137.0
+offset_right = 137.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "BaseUnit collision will look like this."
+
+[node name="BaseUnit" parent="." instance=ExtResource("1_1mtdl")]
+position = Vector2(591, 480)
+scale = Vector2(7.39382, 7.39382)
+should_move = true
+
+[node name="BaseUnit3" parent="." instance=ExtResource("1_1mtdl")]
+position = Vector2(518, 109)
+scale = Vector2(7.39382, 7.39382)
+
+[node name="BaseUnit2" parent="." instance=ExtResource("1_1mtdl")]
+position = Vector2(643, 109)
+rotation = 3.14159
+scale = Vector2(9.45678, 9.14808)
+should_move = true
+
+[node name="BaseUnit4" parent="." instance=ExtResource("1_1mtdl")]
+position = Vector2(711, 484)
+rotation = 3.14159
+scale = Vector2(9.45678, 9.14808)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-387, -64)
+
+[node name="Enemy" parent="Node2D" instance=ExtResource("1_1mtdl")]
+position = Vector2(579, 308)
+
+[node name="Enemy2" parent="Node2D" instance=ExtResource("1_1mtdl")]
+position = Vector2(546, 308)
+
+[node name="Enemy3" parent="Node2D" instance=ExtResource("1_1mtdl")]
+position = Vector2(591, 308)
+
+[node name="BaseUnit" parent="Node2D" instance=ExtResource("1_1mtdl")]
+position = Vector2(574, 580)
+should_move = true

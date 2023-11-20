@@ -19,7 +19,9 @@ offset_left = -99.5
 offset_right = 99.5
 offset_bottom = 26.0
 grow_horizontal = 2
-text = "A Base Unit looks like this"
+text = "A Base Unit looks like this.
+The direction of its head is represented with a dot."
+horizontal_alignment = 1
 
 [node name="BaseUnit" parent="." instance=ExtResource("1_umg4p")]
 position = Vector2(583, 197)
