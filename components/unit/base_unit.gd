@@ -19,12 +19,20 @@ func stop_moving():
 	should_move = false
 
 
+# Get and Set a Vector2() direction from current rotation of the head
+# The final calculation will then be rotated with -90 degree to correct the direction so it faces upwards
+func set_direction_from_rotation():
+	var direction = Vector2(cos(rotation), sin(rotation)).rotated(-PI/2)
+	DIRECTION = direction
+
+
 func initialize_color():
 	$Eye.modulate = EYE_COLOR
 	$Barrier.modulate = BARRIER_COLOR
 
 
 func initialize_physic():
+	set_direction_from_rotation()
 	set_velocity(DIRECTION * SPEED)
 
 
