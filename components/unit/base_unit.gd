@@ -27,6 +27,16 @@ func disable_state():
 	$GenericStateMachine.enabled = false
 
 
+func die():
+	var tweener = create_tween()
+	tweener.set_parallel(true)
+	tweener.tween_property(self, 'modulate', Color.GRAY, 0.5)
+	tweener.tween_property(self, 'scale', Vector2(0.8, 0.8), 0.1)
+	disable_state()
+	stop_moving()
+	$Eye.visible = false
+
+
 # Get a Vector2() direction from current rotation of the head
 # The final calculation will then be rotated with -90 degree to correct the direction so it faces upwards
 func get_direction_from_rotation() -> Vector2:
