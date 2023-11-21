@@ -19,6 +19,14 @@ func stop_moving():
 	should_move = false
 
 
+func enable_state():
+	$GenericStateMachine.enabled = true
+
+
+func disable_state():
+	$GenericStateMachine.enabled = false
+
+
 # Get a Vector2() direction from current rotation of the head
 # The final calculation will then be rotated with -90 degree to correct the direction so it faces upwards
 func get_direction_from_rotation() -> Vector2:
