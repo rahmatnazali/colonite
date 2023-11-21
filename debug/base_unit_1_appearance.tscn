@@ -40,3 +40,10 @@ offset_bottom = 31.0
 grow_horizontal = 0
 text = "Next"
 target_scene = "res://debug/base_unit_2_movement.tscn"
+
+[node name="ButtonScene2" parent="." instance=ExtResource("2_2q1h4")]
+layout_mode = 1
+offset_right = 45.0
+offset_bottom = 31.0
+text = "Prev"
+target_scene = "res://menu/main_menu.tscn"
