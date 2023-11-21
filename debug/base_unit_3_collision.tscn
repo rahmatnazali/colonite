@@ -34,11 +34,11 @@ target_scene = "res://debug/base_unit_2_movement.tscn"
 [node name="BaseUnit1" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(591, 480)
 scale = Vector2(7.39382, 7.39382)
-should_move = true
 SPEED = 100
 
 [node name="BaseUnit3" parent="." instance=ExtResource("1_1mtdl")]
-position = Vector2(518, 109)
+position = Vector2(764, 112)
+rotation = 3.14159
 scale = Vector2(7.39382, 7.39382)
 SPEED = 100
 
@@ -46,28 +46,31 @@ SPEED = 100
 position = Vector2(643, 109)
 rotation = 3.14159
 scale = Vector2(9.45678, 9.14808)
-should_move = true
+should_move = false
 SPEED = 100
 
 [node name="BaseUnit4" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(711, 484)
 rotation = 3.14159
 scale = Vector2(9.45678, 9.14808)
+should_move = false
 SPEED = 100
 
 [node name="SmallEnemy1" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(192, 244)
+should_move = false
 SPEED = 100
 
 [node name="SmallEnemy2" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(159, 244)
+should_move = false
 SPEED = 100
 
 [node name="SmallEnemy3" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(204, 244)
+should_move = false
 SPEED = 100
 
 [node name="SmallEnemy4" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(187, 516)
-should_move = true
 SPEED = 100
