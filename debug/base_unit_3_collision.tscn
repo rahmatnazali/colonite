@@ -31,38 +31,43 @@ offset_bottom = 31.0
 text = "Prev"
 target_scene = "res://debug/base_unit_2_movement.tscn"
 
-[node name="BaseUnit" parent="." instance=ExtResource("1_1mtdl")]
+[node name="BaseUnit1" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(591, 480)
 scale = Vector2(7.39382, 7.39382)
 should_move = true
+SPEED = 100
 
 [node name="BaseUnit3" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(518, 109)
 scale = Vector2(7.39382, 7.39382)
+SPEED = 100
 
 [node name="BaseUnit2" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(643, 109)
 rotation = 3.14159
 scale = Vector2(9.45678, 9.14808)
 should_move = true
+SPEED = 100
 
 [node name="BaseUnit4" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(711, 484)
 rotation = 3.14159
 scale = Vector2(9.45678, 9.14808)
+SPEED = 100
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-387, -64)
+[node name="SmallEnemy1" parent="." instance=ExtResource("1_1mtdl")]
+position = Vector2(192, 244)
+SPEED = 100
 
-[node name="Enemy" parent="Node2D" instance=ExtResource("1_1mtdl")]
-position = Vector2(579, 308)
+[node name="SmallEnemy2" parent="." instance=ExtResource("1_1mtdl")]
+position = Vector2(159, 244)
+SPEED = 100
 
-[node name="Enemy2" parent="Node2D" instance=ExtResource("1_1mtdl")]
-position = Vector2(546, 308)
+[node name="SmallEnemy3" parent="." instance=ExtResource("1_1mtdl")]
+position = Vector2(204, 244)
+SPEED = 100
 
-[node name="Enemy3" parent="Node2D" instance=ExtResource("1_1mtdl")]
-position = Vector2(591, 308)
-
-[node name="BaseUnit" parent="Node2D" instance=ExtResource("1_1mtdl")]
-position = Vector2(574, 580)
+[node name="SmallEnemy4" parent="." instance=ExtResource("1_1mtdl")]
+position = Vector2(187, 516)
 should_move = true
+SPEED = 100
