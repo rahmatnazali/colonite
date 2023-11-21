@@ -25,6 +25,6 @@ func update(delta: float):
 		randomize_variables()
 
 
-func physics_update(delta: float):
+func physics_update(_delta: float):
 	if character != null:
 		character.rotation = target_rotation
