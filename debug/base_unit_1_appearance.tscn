@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c45il80rtcxjf"]
+[gd_scene load_steps=4 format=3 uid="uid://c45il80rtcxjf"]
 
+[ext_resource type="Script" path="res://debug/base_unit_1_appearance.gd" id="1_omc4d"]
 [ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit.tscn" id="1_umg4p"]
 [ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="2_2q1h4"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_omc4d")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
