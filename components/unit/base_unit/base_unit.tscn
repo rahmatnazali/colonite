@@ -1,17 +1,17 @@
 [gd_scene load_steps=7 format=3 uid="uid://cng8yewksr3xk"]
 
-[ext_resource type="Script" path="res://components/unit/base_unit.gd" id="1_0uss8"]
+[ext_resource type="Script" path="res://components/unit/base_unit/base_unit.gd" id="1_bxnya"]
 [ext_resource type="Texture2D" uid="uid://bt0jajm413vkn" path="res://assets/base_body.png" id="2_2kicu"]
 [ext_resource type="Texture2D" uid="uid://dd18e3tcx58d1" path="res://assets/base_border.png" id="3_ulfta"]
 [ext_resource type="Script" path="res://components/state_management/state_machine.gd" id="4_ghr87"]
-[ext_resource type="Script" path="res://components/unit/base_unit_state_wander.gd" id="5_mf7x1"]
+[ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_wander.gd" id="5_x51u7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ftc2b"]
 radius = 6.0
 
 [node name="BaseUnit" type="CharacterBody2D"]
 motion_mode = 1
-script = ExtResource("1_0uss8")
+script = ExtResource("1_bxnya")
 
 [node name="Body" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
@@ -33,8 +33,8 @@ shape = SubResource("CircleShape2D_ftc2b")
 
 [node name="GenericStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("4_ghr87")
-initial_state = NodePath("BaseUnitWander")
+initial_state = NodePath("Wander")
 
-[node name="BaseUnitWander" type="Node" parent="GenericStateMachine" node_paths=PackedStringArray("character")]
-script = ExtResource("5_mf7x1")
+[node name="Wander" type="Node" parent="GenericStateMachine" node_paths=PackedStringArray("character")]
+script = ExtResource("5_x51u7")
 character = NodePath("../..")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://mbcgw6vjj2wc"]
 
 [ext_resource type="Script" path="res://debug/base_unit_2_movement.gd" id="1_kmqbt"]
-[ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit.tscn" id="2_yb8a0"]
+[ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="2_yb8a0"]
 [ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="3_21b87"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a1a2"]
