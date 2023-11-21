@@ -4,8 +4,8 @@ extends CharacterBody2D
 @export var should_move: bool = false
 @export var should_stop_on_collide: bool = false
 
-
-@export var SPEED: int = 500
+@export var team: int = 1
+@export var SPEED: int = 50
 @export var DIRECTION: Vector2 = Vector2.UP
 @export var EYE_COLOR = Color.BLACK
 @export var BARRIER_COLOR = Color.GRAY
