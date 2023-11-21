@@ -1,8 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://mbcgw6vjj2wc"]
+[gd_scene load_steps=8 format=3 uid="uid://mbcgw6vjj2wc"]
 
 [ext_resource type="Script" path="res://debug/base_unit_2_movement.gd" id="1_kmqbt"]
 [ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit.tscn" id="2_yb8a0"]
 [ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="3_21b87"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8a1a2"]
+size = Vector2(1122, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vy6p"]
+size = Vector2(27.8846, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lndp1"]
+size = Vector2(20, 546)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c21sy"]
+size = Vector2(8, 20)
 
 [node name="base_unit_1_movement" type="Control"]
 layout_mode = 3
@@ -25,14 +37,25 @@ grow_horizontal = 2
 text = "BaseUnit can only move forward at where his head is pointed at.
 If the rotation is changed, so does the direction of where it move."
 
-[node name="BaseUnit" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(565, 381)
+[node name="ButtonScene" parent="." instance=ExtResource("3_21b87")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Next"
+target_scene = "res://debug/base_unit_3_collision.tscn"
+
+[node name="BaseUnitCircular" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(571, 336)
 rotation = 3.14159
 should_move = true
 SPEED = 100
 
-[node name="BaseUnitCircular" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(571, 336)
+[node name="BaseUnit" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(565, 381)
 rotation = 3.14159
 should_move = true
 SPEED = 100
@@ -78,13 +101,151 @@ rotation = 2.35619
 should_move = true
 SPEED = 100
 
-[node name="ButtonScene" parent="." instance=ExtResource("3_21b87")]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -45.0
-offset_bottom = 31.0
-grow_horizontal = 0
-text = "Next"
-target_scene = "res://debug/base_unit_3_collision.tscn"
+[node name="BaseUnit9" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit10" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit11" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit12" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit13" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit14" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit15" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit16" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit17" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit18" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit19" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit20" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit21" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit22" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit23" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit24" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit25" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit26" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit27" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="BaseUnit28" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(597, 360)
+rotation = 2.35619
+should_move = true
+SPEED = 100
+
+[node name="CollisionBorder" type="Node2D" parent="."]
+
+[node name="Up" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Up"]
+position = Vector2(577, 82)
+shape = SubResource("RectangleShape2D_8a1a2")
+
+[node name="Left" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Left"]
+position = Vector2(580, 624)
+scale = Vector2(39.52, 0.320002)
+shape = SubResource("RectangleShape2D_7vy6p")
+
+[node name="Down" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Down"]
+position = Vector2(25, 355)
+scale = Vector2(0.4, 1)
+shape = SubResource("RectangleShape2D_lndp1")
+
+[node name="Right" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Right"]
+position = Vector2(1128, 352)
+scale = Vector2(1, 27.72)
+shape = SubResource("RectangleShape2D_c21sy")

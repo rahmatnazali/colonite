@@ -2,8 +2,7 @@ extends Control
 
 
 func _ready():
-	pass
-
+	$BaseUnitCircular.disable_state()
 
 func _physics_process(delta):
 	# $BaseUnitCircular is always spinning to demonstrate that BaseUnit is only
