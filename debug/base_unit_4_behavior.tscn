@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://6evmmwcc1l3s"]
+
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="2_j84gb"]
+[ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="3_sctut"]
+
+[node name="base_unit_4_behavior" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -137.0
+offset_right = 137.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "BaseUnit will scan for the closest siblings with different team, and attempt to attack them."
+
+[node name="ButtonScene" parent="." instance=ExtResource("2_j84gb")]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 31.0
+text = "Prev"
+target_scene = "res://debug/base_unit_3_collision.tscn"
+
+[node name="BaseUnit1" parent="." instance=ExtResource("3_sctut")]
+position = Vector2(291, 381)
+
+[node name="BaseUnit2" parent="." instance=ExtResource("3_sctut")]
+position = Vector2(288, 184)
+
+[node name="Enemy1" parent="." instance=ExtResource("3_sctut")]
+position = Vector2(767, 185)
+team = 2
+EYE_COLOR = Color(1, 0, 0, 1)

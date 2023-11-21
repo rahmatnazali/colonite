@@ -31,6 +31,17 @@ offset_bottom = 31.0
 text = "Prev"
 target_scene = "res://debug/base_unit_2_movement.tscn"
 
+[node name="ButtonScene2" parent="." instance=ExtResource("2_xt54d")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -62.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Next"
+target_scene = "res://debug/base_unit_4_behavior.tscn"
+
 [node name="BaseUnit1" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(591, 480)
 scale = Vector2(7.39382, 7.39382)
