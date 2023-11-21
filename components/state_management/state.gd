@@ -18,10 +18,10 @@ func exit():
 
 
 # Execute some logic at every frame (equivalent to _process)
-func update(delta):
+func update(_delta):
 	pass
 
 
 #  Execute some logic at fixed intervals (equivalent to _physics_process)
-func physics_update(delta):
+func physics_update(_delta):
 	pass
