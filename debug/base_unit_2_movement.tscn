@@ -109,121 +109,121 @@ should_move = true
 SPEED = 100
 
 [node name="BaseUnit9" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(766, 116)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit10" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(790, 580)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit11" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(84.0001, 111)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit12" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(110, 251)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit13" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(398, 280)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit14" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(470, 221)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit15" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(386, 438)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit16" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(153, 544)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit17" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(919, 327)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit18" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(1028, 533)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit19" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(1027, 152)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit20" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(1029, 285)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit21" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(769, 446)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit22" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(213, 371)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit23" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(810, 225)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit24" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(619, 534)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit25" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(578, 158)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit26" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(264, 145)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit27" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(437, 128)
 rotation = 2.35619
 should_move = true
 SPEED = 100
 
 [node name="BaseUnit28" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(597, 360)
+position = Vector2(325, 532)
 rotation = 2.35619
 should_move = true
 SPEED = 100
