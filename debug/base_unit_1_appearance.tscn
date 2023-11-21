@@ -1,8 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://c45il80rtcxjf"]
+[gd_scene load_steps=8 format=3 uid="uid://c45il80rtcxjf"]
 
 [ext_resource type="Script" path="res://debug/base_unit_1_appearance.gd" id="1_omc4d"]
 [ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="1_umg4p"]
 [ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="2_2q1h4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhog4"]
+size = Vector2(1122, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_en8dr"]
+size = Vector2(27.8846, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb8up"]
+size = Vector2(20, 546)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ou4w"]
+size = Vector2(8, 20)
 
 [node name="base_unit_1_appearance" type="Control"]
 layout_mode = 3
@@ -23,7 +35,8 @@ offset_right = 99.5
 offset_bottom = 26.0
 grow_horizontal = 2
 text = "A Base Unit looks like this.
-The direction of its head is represented with a dot."
+The direction of its head is represented with a dot.
+By default, it will start on \"Wander\" state where it will randomly choose a direction and go towards it."
 horizontal_alignment = 1
 
 [node name="BaseUnit" parent="." instance=ExtResource("1_umg4p")]
@@ -47,3 +60,32 @@ offset_right = 45.0
 offset_bottom = 31.0
 text = "Prev"
 target_scene = "res://menu/main_menu.tscn"
+
+[node name="CollisionBorder" type="Node2D" parent="ButtonScene2"]
+
+[node name="Up" type="StaticBody2D" parent="ButtonScene2/CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonScene2/CollisionBorder/Up"]
+position = Vector2(577, 82)
+shape = SubResource("RectangleShape2D_rhog4")
+
+[node name="Left" type="StaticBody2D" parent="ButtonScene2/CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonScene2/CollisionBorder/Left"]
+position = Vector2(580, 624)
+scale = Vector2(39.52, 0.320002)
+shape = SubResource("RectangleShape2D_en8dr")
+
+[node name="Down" type="StaticBody2D" parent="ButtonScene2/CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonScene2/CollisionBorder/Down"]
+position = Vector2(25, 355)
+scale = Vector2(0.4, 1)
+shape = SubResource("RectangleShape2D_rb8up")
+
+[node name="Right" type="StaticBody2D" parent="ButtonScene2/CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonScene2/CollisionBorder/Right"]
+position = Vector2(1128, 352)
+scale = Vector2(1, 27.72)
+shape = SubResource("RectangleShape2D_3ou4w")
