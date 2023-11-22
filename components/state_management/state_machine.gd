@@ -36,8 +36,6 @@ func _physics_process(delta):
 
 
 func on_child_transitioned(source_state: GenericState, new_state_name: StringName):
-	print('Transitioned')
-	
 	# if current_state is not the intendend source_state, simply return
 	if current_state != source_state:
 		return
