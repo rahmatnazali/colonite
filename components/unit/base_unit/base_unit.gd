@@ -10,6 +10,7 @@ class_name BaseUnit
 
 @export var team: int = 1
 @export var SPEED: int = 50
+@export var SPEED_CHASE: int = 500
 @export var DIRECTION: Vector2 = Vector2.UP
 @export var EYE_COLOR = Color.BLACK
 @export var BODY_COLOR = Color.WHITE
