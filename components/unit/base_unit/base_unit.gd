@@ -11,7 +11,7 @@ class_name BaseUnit
 @export var team: int = 1
 @export var SPEED: int = 50
 @export var SPEED_CHASE: int = 500
-@export var DIRECTION: Vector2 = Vector2.UP
+@export var DIRECTION: Vector2 = Vector2.RIGHT
 @export var EYE_COLOR = Color.BLACK
 @export var BODY_COLOR = Color.WHITE
 @export var BARRIER_COLOR = Color.GRAY
@@ -44,9 +44,8 @@ func die():
 
 
 # Get a Vector2() direction from current rotation of the head
-# The final calculation will then be rotated with -90 degree to correct the direction so it faces upwards
 func get_direction_from_rotation() -> Vector2:
-	var direction = Vector2(cos(rotation), sin(rotation)).rotated(deg_to_rad(-90))
+	var direction = Vector2(cos(rotation), sin(rotation))
 	return direction
 
 
