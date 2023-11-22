@@ -19,3 +19,4 @@ config/icon="res://assets/base_body.png"
 [autoload]
 
 GlobalAudioPlayer="*res://globals/global_audio_player.tscn"
+GlobalUtilities="*res://globals/global_utilities.gd"
