@@ -2,7 +2,7 @@ extends GenericState
 class_name BaseUnitWander
 
 
-@export var character: CharacterBody2D
+@export var character: BaseUnit
 
 
 var target_rotation: int
@@ -15,6 +15,9 @@ func randomize_variables():
 
 
 func enter():
+	if character.debug_mode:
+		print(character.name, ': entering wander')
+
 	randomize_variables()
 
 
@@ -28,3 +31,4 @@ func update(delta: float):
 func physics_update(_delta: float):
 	if character != null:
 		character.rotation = target_rotation
+

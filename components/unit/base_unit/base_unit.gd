@@ -2,6 +2,9 @@ extends CharacterBody2D
 class_name BaseUnit
 
 
+@export var debug_mode: bool = false
+
+
 @export var should_move: bool = true
 @export var should_stop_on_collide: bool = false
 
