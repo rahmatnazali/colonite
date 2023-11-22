@@ -42,6 +42,12 @@ horizontal_alignment = 1
 [node name="BaseUnit" parent="." instance=ExtResource("1_umg4p")]
 position = Vector2(583, 197)
 scale = Vector2(7.76, 7.76)
+debug_mode = true
+
+[node name="BaseUnit2" parent="." instance=ExtResource("1_umg4p")]
+position = Vector2(580, 376)
+scale = Vector2(7.76, 7.76)
+debug_mode = true
 
 [node name="ButtonScene" parent="." instance=ExtResource("2_2q1h4")]
 layout_mode = 1
