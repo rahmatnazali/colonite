@@ -9,6 +9,7 @@ class_name BaseUnit
 @export var SPEED: int = 50
 @export var DIRECTION: Vector2 = Vector2.UP
 @export var EYE_COLOR = Color.BLACK
+@export var BODY_COLOR = Color.WHITE
 @export var BARRIER_COLOR = Color.GRAY
 
 
@@ -47,6 +48,7 @@ func get_direction_from_rotation() -> Vector2:
 
 func initialize_color():
 	$Eye.modulate = EYE_COLOR
+	$Body.modulate = BODY_COLOR
 	$Barrier.modulate = BARRIER_COLOR
 
 
