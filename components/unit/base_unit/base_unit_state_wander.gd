@@ -25,7 +25,8 @@ func update(delta: float):
 	if wander_time > 0:
 		wander_time -= delta
 	else:
-		randomize_variables()
+		# State: jump to scan enemy
+		transitioned.emit(self, 'scan')
 
 
 func physics_update(_delta: float):
