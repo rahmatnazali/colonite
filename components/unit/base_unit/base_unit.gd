@@ -9,7 +9,7 @@ class_name BaseUnit
 @export var health: int = 10
 
 @export var direction: Vector2 = Vector2.RIGHT
-var current_speed: int = 50
+var current_speed: int
 @export var speed_normal: int = 50
 @export var speed_chase: int = 500
 
@@ -56,6 +56,7 @@ func move_towards_direction(move_direction: Vector2):
 
 func _ready():
 	initialize_color()
+	current_speed = speed_normal
 
 
 func _physics_process(_delta):
