@@ -15,7 +15,7 @@ func randomize_variables():
 
 
 func enter():
-	if character.debug_mode:
+	if character.state_verbose_mode:
 		print(character.name, ': entering wander')
 
 	randomize_variables()

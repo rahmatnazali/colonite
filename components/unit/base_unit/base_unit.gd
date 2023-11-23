@@ -2,9 +2,6 @@ extends CharacterBody2D
 class_name BaseUnit
 
 
-@export var debug_mode: bool = false
-
-
 @export var should_move: bool = true
 @export var should_stop_on_collide: bool = false
 
@@ -18,6 +15,11 @@ class_name BaseUnit
 @export var EYE_COLOR = Color.BLACK
 @export var BODY_COLOR = Color.WHITE
 @export var BARRIER_COLOR = Color.GRAY
+
+
+@export var verbose_mode: bool = false
+@export var state_verbose_mode: bool = false
+@export var debug_health: bool = false
 
 
 func start_moving():
