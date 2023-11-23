@@ -38,15 +38,22 @@ func get_all_base_unit(source_node: Node2D):
 
 
 # Get all other BaseUnit that has different `team` variable than the supplied `source_node`
-func get_outsider_base_unit(source_node: Node2D):
+func get_other_units(source_node: Node2D, enemy_only: bool = false, alive_only: bool = false):
 	var source_team = source_node.team
 	var source_parent = source_node.get_parent()
 	var source_siblings = source_parent.get_children()
 	
 	var siblings: Array = []
 	
-	for child in source_siblings:
-		if child is BaseUnit and child != source_node and child.team != source_team:
-			siblings.push_back(child)
+	for sibling in source_siblings:
+		if sibling is BaseUnit and sibling != source_node:
+			var is_considered = true
+
+			if enemy_only and sibling.team == source_team: is_considered = false
+			if alive_only and sibling.is_alive == false: is_considered = false
+			
+			if is_considered:
+					siblings.push_back(sibling)
 	
 	return siblings
+
