@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cng8yewksr3xk"]
+[gd_scene load_steps=10 format=3 uid="uid://cng8yewksr3xk"]
 
 [ext_resource type="Script" path="res://components/unit/base_unit/base_unit.gd" id="1_bxnya"]
 [ext_resource type="Texture2D" uid="uid://bt0jajm413vkn" path="res://assets/base_body.png" id="2_2kicu"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://components/state_management/state_machine.gd" id="4_ghr87"]
 [ext_resource type="PackedScene" uid="uid://c30l8cawqogpx" path="res://components/stats/health_component.tscn" id="4_opcn1"]
 [ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_wander.gd" id="5_x51u7"]
+[ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_scan.gd" id="6_mrf16"]
+[ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_chase.gd" id="8_ei86w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ftc2b"]
 radius = 6.0
@@ -40,6 +42,14 @@ initial_state = NodePath("Wander")
 
 [node name="Wander" type="Node" parent="GenericStateMachine" node_paths=PackedStringArray("character")]
 script = ExtResource("5_x51u7")
+character = NodePath("../..")
+
+[node name="Scan" type="Node" parent="GenericStateMachine" node_paths=PackedStringArray("character")]
+script = ExtResource("6_mrf16")
+character = NodePath("../..")
+
+[node name="Chase" type="Node" parent="GenericStateMachine" node_paths=PackedStringArray("character")]
+script = ExtResource("8_ei86w")
 character = NodePath("../..")
 
 [connection signal="health_changed" from="HealthComponent" to="." method="_on_health_component_health_changed"]
