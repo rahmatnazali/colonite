@@ -9,6 +9,9 @@ class_name BaseUnit
 @export var should_stop_on_collide: bool = false
 
 @export var team: int = 1
+@export var health: int = 10
+
+
 @export var SPEED: int = 50
 @export var SPEED_CHASE: int = 500
 @export var DIRECTION: Vector2 = Vector2.RIGHT
@@ -75,3 +78,19 @@ func _ready():
 
 func _physics_process(_delta):
 	handle_movement()
+
+
+func _on_health_component_max_health_changed(max_health):
+	pass
+
+
+func _on_health_component_health_changed(health):
+	pass
+
+
+func _on_health_component_health_depleted():
+	# handle die
+	if verbose_mode: print(name, ' is dead')
+	disable_state()
+	stop_moving()
+	play_die_animation()
