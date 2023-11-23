@@ -12,6 +12,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ftc2b"]
 radius = 6.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ev51"]
+radius = 8.06226
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3j0ad"]
+radius = 22.0907
+
 [node name="BaseUnit" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_bxnya")
@@ -34,6 +40,16 @@ texture = ExtResource("3_ulfta")
 visible = false
 shape = SubResource("CircleShape2D_ftc2b")
 
+[node name="AttackRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+shape = SubResource("CircleShape2D_0ev51")
+
+[node name="ConsumeRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConsumeRange"]
+shape = SubResource("CircleShape2D_3j0ad")
+
 [node name="HealthComponent" parent="." instance=ExtResource("4_opcn1")]
 
 [node name="GenericStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
@@ -48,9 +64,11 @@ character = NodePath("../..")
 script = ExtResource("6_mrf16")
 character = NodePath("../..")
 
-[node name="Chase" type="Node" parent="GenericStateMachine" node_paths=PackedStringArray("character")]
+[node name="Chase" type="Node" parent="GenericStateMachine" node_paths=PackedStringArray("character", "attack_range")]
 script = ExtResource("8_ei86w")
 character = NodePath("../..")
+attack_range = NodePath("../../AttackRange")
+
 
 [connection signal="health_changed" from="HealthComponent" to="." method="_on_health_component_health_changed"]
 [connection signal="health_depleted" from="HealthComponent" to="." method="_on_health_component_health_depleted"]

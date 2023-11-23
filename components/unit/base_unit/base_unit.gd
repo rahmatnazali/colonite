@@ -13,6 +13,7 @@ class_name BaseUnit
 var current_speed: int
 @export var speed_normal: int = 50
 @export var speed_chase: int = 500
+@export var speed_attacking: int = 0
 
 @export var EYE_COLOR = Color.BLACK
 @export var BODY_COLOR = Color.WHITE
