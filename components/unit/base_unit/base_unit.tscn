@@ -18,7 +18,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_2kicu")
 
 [node name="Eye" type="Sprite2D" parent="."]
-position = Vector2(2.27374e-13, -3)
+position = Vector2(3, 0)
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("2_2kicu")
 
