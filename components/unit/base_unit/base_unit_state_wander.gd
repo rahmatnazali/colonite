@@ -14,7 +14,7 @@ func randomize_variables():
 	wander_time = randf_range(0.3, 2)
 
 
-func enter():
+func enter(_payload = null):
 	assert(character != null, 'WanderState: Character is not provided (null)')
 
 	if character.state_verbose_mode:
