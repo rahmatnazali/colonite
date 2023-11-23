@@ -6,6 +6,7 @@ class_name BaseUnit
 @export var should_stop_on_collide: bool = false
 
 @export var team: int = 1
+@export var is_alive: bool = true
 @export var health: int = 10
 
 @export var direction: Vector2 = Vector2.RIGHT
@@ -74,6 +75,7 @@ func _on_health_component_health_changed(_new_health):
 func _on_health_component_health_depleted():
 	# handle die
 	if verbose_mode: print(name, ' is dead')
+	is_alive = false
 	disable_state()
 	stop_moving()
 	play_die_animation()
