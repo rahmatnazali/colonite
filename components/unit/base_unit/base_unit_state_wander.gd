@@ -15,6 +15,8 @@ func randomize_variables():
 
 
 func enter():
+	assert(character != null, 'WanderState: Character is not provided (null)')
+
 	if character.state_verbose_mode:
 		print(character.name, ': entering wander')
 

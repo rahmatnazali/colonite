@@ -13,7 +13,7 @@ func _ready():
 	$MiddleUnit4.disable_state()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	$SmallEnemy4.move_towards_direction(Vector2.UP)
 	$MiddleUnit1.move_towards_direction(Vector2.DOWN)
 	$MiddleUnit4.move_towards_direction(Vector2.UP)

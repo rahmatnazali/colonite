@@ -63,11 +63,11 @@ func _physics_process(_delta):
 	pass
 
 
-func _on_health_component_max_health_changed(max_health):
+func _on_health_component_max_health_changed(_max_health):
 	pass
 
 
-func _on_health_component_health_changed(health):
+func _on_health_component_health_changed(_new_health):
 	pass
 
 

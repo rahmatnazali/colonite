@@ -16,7 +16,7 @@ func _ready():
 			states[child.name.to_lower()] = child
 			child.transitioned.connect(on_child_transitioned)
 		else:
-			push_warning('StateMachine contains child which is not `State`')
+			push_warning('StateMachine contains child which is not `State`: ', child)
 	
 	if initial_state != null:
 		initial_state.enter()
@@ -43,7 +43,7 @@ func on_child_transitioned(source_state: GenericState, new_state_name: StringNam
 	# get the target_state by name from the `states` dictionary. Warn if no such state found.
 	var new_state: GenericState = states.get(new_state_name.to_lower())
 	if new_state == null:
-		push_warning('Called transition on a ' + new_state_name + 'state that does not exist in the `states` dictionary.')
+		push_warning('Called transition to state "' + new_state_name + '" state that does not exist in the `states` dictionary.')
 		return
 	
 	# if current_state exist, call exit() on that state
