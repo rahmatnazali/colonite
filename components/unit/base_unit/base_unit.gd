@@ -89,7 +89,6 @@ func play_die_animation():
 	die_tweener.tween_property(self, 'scale', dead_scale, 0.1)
 
 
-
 # === Utils ===
 
 
