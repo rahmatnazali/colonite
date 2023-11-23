@@ -55,13 +55,13 @@ offset_bottom = 31.0
 text = "Prev"
 target_scene = "res://debug/base_unit_1_appearance.tscn"
 
-[node name="BaseUnitCircular" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(571, 336)
+[node name="BaseUnit" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(565, 381)
 rotation = 3.14159
 SPEED = 100
 
-[node name="BaseUnit" parent="." instance=ExtResource("2_yb8a0")]
-position = Vector2(565, 381)
+[node name="BaseUnit1" parent="." instance=ExtResource("2_yb8a0")]
+position = Vector2(571, 336)
 rotation = 3.14159
 SPEED = 100
 
