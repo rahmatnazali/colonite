@@ -38,14 +38,14 @@ func disable_state():
 	$GenericStateMachine.enabled = false
 
 
-func die():
-	var tweener = create_tween()
-	tweener.set_parallel(true)
-	tweener.tween_property(self, 'modulate', Color.GRAY, 0.5)
-	tweener.tween_property(self, 'scale', Vector2(0.8, 0.8), 0.1)
-	disable_state()
-	stop_moving()
-	$Eye.visible = false
+func play_die_animation():
+	$Barrier.visible = false
+	var dead_scale = scale * 0.9
+	var die_tweener = create_tween()
+	die_tweener.set_parallel(true)
+	die_tweener.tween_property($Body, 'modulate', Color.GRAY, 0.1)
+	die_tweener.tween_property($Eye, 'modulate', Color.DARK_GRAY, 0.1)
+	die_tweener.tween_property(self, 'scale', dead_scale, 0.1)
 
 
 # Get a Vector2() direction from current rotation of the head
