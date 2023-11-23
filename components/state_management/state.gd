@@ -7,7 +7,7 @@ signal transitioned(source_state: GenericState, new_state: StringName)
 
 # Execute some logic when the machine enters the state
 # (initialize variables, trigger one-time actions, update current animation)
-func enter():
+func enter(_payload = null):
 	pass
 
 

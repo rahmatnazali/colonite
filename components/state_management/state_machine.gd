@@ -35,7 +35,7 @@ func _physics_process(delta):
 		current_state.physics_update(delta)
 
 
-func on_child_transitioned(source_state: GenericState, new_state_name: StringName):
+func on_child_transitioned(source_state: GenericState, new_state_name: StringName, payload = null):
 	# if current_state is not the intendend source_state, simply return
 	if current_state != source_state:
 		return
@@ -51,7 +51,10 @@ func on_child_transitioned(source_state: GenericState, new_state_name: StringNam
 		current_state.exit()
 	
 	# call enter() on the new_state
-	new_state.enter()
+	if payload != null:
+		new_state.enter(payload)
+	else:
+		new_state.enter()
 	
 	# set the new_state as the current_state
 	current_state = new_state
