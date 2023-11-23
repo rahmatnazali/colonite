@@ -62,22 +62,22 @@ position = Vector2(188, 300)
 rotation = -1.5708
 
 [node name="MiddleUnit1" parent="." instance=ExtResource("1_1mtdl")]
-position = Vector2(709, 111)
+position = Vector2(602, 205)
 rotation = 1.5708
 scale = Vector2(6.6, 6.6)
 
 [node name="MiddleUnit2" parent="." instance=ExtResource("1_1mtdl")]
-position = Vector2(685, 406)
+position = Vector2(556, 367)
 rotation = -1.5708
 scale = Vector2(6.6, 6.6)
 should_move = false
 
 [node name="MiddleUnit3" parent="." instance=ExtResource("1_1mtdl")]
-position = Vector2(493, 115)
+position = Vector2(446, 228)
 rotation = 1.5708
 scale = Vector2(6.6, 6.6)
 
 [node name="MiddleUnit4" parent="." instance=ExtResource("1_1mtdl")]
-position = Vector2(436, 401)
+position = Vector2(504, 496)
 rotation = -1.5708
 scale = Vector2(6.6, 6.6)
