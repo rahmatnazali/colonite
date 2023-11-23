@@ -40,7 +40,7 @@ offset_left = -62.0
 offset_bottom = 31.0
 grow_horizontal = 0
 text = "Next"
-target_scene = "res://debug/base_unit_4_behavior.tscn"
+target_scene = "res://debug/base_unit_4_behavior_single.tscn"
 
 [node name="SmallEnemy1" parent="." instance=ExtResource("1_1mtdl")]
 position = Vector2(192, 244)

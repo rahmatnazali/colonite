@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://debc2hxonh2t"]
+
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="1_jntu0"]
+[ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="2_inmjx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yvdi"]
+size = Vector2(1122, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2h4h"]
+size = Vector2(27.8846, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xk1m"]
+size = Vector2(20, 546)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67sea"]
+size = Vector2(8, 20)
+
+[node name="base_unit_4_behavior_single" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -137.0
+offset_right = 137.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "BaseUnit will scan for the closest siblings with different team, and attempt to attack them."
+
+[node name="ButtonScene" parent="." instance=ExtResource("1_jntu0")]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 31.0
+text = "Prev"
+target_scene = "res://debug/base_unit_3_collision.tscn"
+
+[node name="ButtonScene2" parent="." instance=ExtResource("1_jntu0")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -62.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Next"
+target_scene = "res://debug/base_unit_4_behavior_multiple.tscn"
+
+[node name="BaseUnit1" parent="." instance=ExtResource("2_inmjx")]
+position = Vector2(291, 381)
+state_verbose_mode = true
+
+[node name="Enemy1" parent="." instance=ExtResource("2_inmjx")]
+position = Vector2(767, 185)
+team = 2
+BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+debug_health = true
+
+[node name="CollisionBorder" type="Node2D" parent="."]
+
+[node name="Up" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Up"]
+position = Vector2(577, 82)
+shape = SubResource("RectangleShape2D_0yvdi")
+
+[node name="Left" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Left"]
+position = Vector2(580, 624)
+scale = Vector2(39.52, 0.320002)
+shape = SubResource("RectangleShape2D_y2h4h")
+
+[node name="Down" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Down"]
+position = Vector2(25, 355)
+scale = Vector2(0.4, 1)
+shape = SubResource("RectangleShape2D_3xk1m")
+
+[node name="Right" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Right"]
+position = Vector2(1128, 352)
+scale = Vector2(1, 27.72)
+shape = SubResource("RectangleShape2D_67sea")
