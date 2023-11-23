@@ -5,12 +5,12 @@ class_name BaseUnitWander
 @export var character: BaseUnit
 
 
-var target_rotation: int
 var wander_time: float
+var move_direction: Vector2
 
 
 func randomize_variables():
-	target_rotation = randi_range(-180, 180)
+	move_direction = Vector2(randf_range(-1 ,1), randf_range(-1, 1)).normalized()
 	wander_time = randf_range(0.3, 2)
 
 
@@ -31,5 +31,6 @@ func update(delta: float):
 
 func physics_update(_delta: float):
 	if character != null:
-		character.rotation = target_rotation
+		if wander_time > 0:
+			character.move_towards_direction(move_direction)
 
