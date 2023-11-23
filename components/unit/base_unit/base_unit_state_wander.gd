@@ -21,6 +21,7 @@ func enter(_payload = null):
 		print(character.name, ': entering wander')
 
 	randomize_variables()
+	character.current_speed = character.speed_normal
 
 
 func update(delta: float):
