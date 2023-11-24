@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://60dp1wux6pol"]
+[gd_scene load_steps=7 format=3 uid="uid://60dp1wux6pol"]
 
 [ext_resource type="Script" path="res://globals/global_audio_player.gd" id="1_8sl07"]
 [ext_resource type="AudioStream" uid="uid://crhpnca7rh268" path="res://sound/click_robotic.wav" id="2_h2dd7"]
 [ext_resource type="AudioStream" uid="uid://bcj56jpkc450s" path="res://sound/level-up-1.wav" id="3_20wck"]
 [ext_resource type="AudioStream" uid="uid://bgi3me0og53g1" path="res://sound/chase-1.wav" id="4_uiqca"]
 [ext_resource type="AudioStream" uid="uid://disad2w6mw60p" path="res://sound/attack-1.wav" id="5_nbx8s"]
+[ext_resource type="AudioStream" uid="uid://bnbqm4xaux5a3" path="res://sound/dead-1.wav" id="6_jrcrd"]
 
 [node name="GlobalAudioPlayer" type="Node"]
 script = ExtResource("1_8sl07")
@@ -20,3 +21,6 @@ stream = ExtResource("4_uiqca")
 
 [node name="AttackPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_nbx8s")
+
+[node name="DeadPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jrcrd")

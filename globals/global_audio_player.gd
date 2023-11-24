@@ -16,3 +16,7 @@ func play_chase_sound():
 func play_attack_sound():
 	$AttackPlayer.play()
 
+
+func play_dead_sound():
+	$DeadPlayer.play()
+
