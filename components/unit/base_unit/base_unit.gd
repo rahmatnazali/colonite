@@ -93,6 +93,7 @@ func level_up():
 	level_up_tween.tween_property(self, 'scale', Vector2(1.5, 1.5), 0.3)
 	health_component.set_max_health(health_component.max_health + 10)
 	health_component.set_current_health(health_component.max_health)
+	attack_component.set_damage(attack_component.get_damage() * 2)
 
 
 # == Health Change ==
