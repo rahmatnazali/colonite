@@ -122,6 +122,7 @@ func play_die_animation():
 	die_tweener.tween_property($Body, 'modulate', Color.GRAY, 0.1)
 	die_tweener.tween_property($Eye, 'modulate', Color.DARK_GRAY, 0.1)
 	die_tweener.tween_property(self, 'scale', dead_scale, 0.1)
+	GlobalAudioPlayer.play_dead_sound()
 
 
 func _on_health_component_taking_damage():
