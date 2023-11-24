@@ -56,9 +56,20 @@ func initialize_color():
 
 
 # Given a normalized direction, BaseUnit will look at it and move towards it with assigned speed
+# Majority of the usecase should prefer move_towards_position below
 func move_towards_direction(move_direction: Vector2):
 	if should_move:
 		var normalized_move_direction = move_direction.normalized()
+		direction = normalized_move_direction
+		look_at(global_position + normalized_move_direction)
+		set_velocity(direction * current_speed)
+		move_and_slide()
+
+
+# Given a global position target, BaseUnit will look at it and move towards it with assigned speed
+func move_towards_position(target_position: Vector2):
+	if should_move:
+		var normalized_move_direction = (target_position - global_position).normalized()
 		direction = normalized_move_direction
 		look_at(global_position + normalized_move_direction)
 		set_velocity(direction * current_speed)
