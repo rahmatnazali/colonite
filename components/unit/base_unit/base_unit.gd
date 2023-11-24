@@ -19,6 +19,11 @@ var current_speed: int
 @export var BODY_COLOR = Color.WHITE
 @export var BARRIER_COLOR = Color.GRAY
 
+
+@export var health_component: Node
+@export var attack_component: Node
+
+
 @export var verbose_mode: bool = false
 @export var state_verbose_mode: bool = false
 @export var debug_health: bool = false
