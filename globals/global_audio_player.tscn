@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://60dp1wux6pol"]
+[gd_scene load_steps=4 format=3 uid="uid://60dp1wux6pol"]
 
 [ext_resource type="Script" path="res://globals/global_audio_player.gd" id="1_8sl07"]
 [ext_resource type="AudioStream" uid="uid://crhpnca7rh268" path="res://sound/click_robotic.wav" id="2_h2dd7"]
+[ext_resource type="AudioStream" uid="uid://bcj56jpkc450s" path="res://sound/power-up.wav" id="3_kvvve"]
 
 [node name="GlobalAudioPlayer" type="Node"]
 script = ExtResource("1_8sl07")
 
 [node name="MouseClickPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_h2dd7")
-volume_db = -10.0
+
+[node name="PowerUpPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kvvve")
