@@ -24,8 +24,7 @@ func enter(payload = null):
 func physics_update(_delta):
 	if target_unit.is_alive:
 		# move towards target_unit
-		var direction_to_enemy = (target_unit.global_position - character.global_position).normalized()
-		character.move_towards_direction(direction_to_enemy)
+		character.move_towards_position(target_unit.global_position)
 		
 		# if target_unit is within the attack range, transition to attack state
 		if target_unit in attack_range.get_overlapping_bodies():
