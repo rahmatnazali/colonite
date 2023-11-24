@@ -92,6 +92,16 @@ func play_die_animation():
 	die_tweener.tween_property(self, 'scale', dead_scale, 0.1)
 
 
+func _on_health_component_taking_damage():
+	play_taking_damage_animation()
+
+
+func play_taking_damage_animation():
+	var taking_damage_tween = create_tween()
+	taking_damage_tween.tween_property($Body, 'modulate', Color.RED, 0.05)
+	taking_damage_tween.tween_property($Body, 'modulate', BODY_COLOR, 0.05)
+
+
 # === Utils ===
 
 

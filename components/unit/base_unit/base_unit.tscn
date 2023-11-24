@@ -72,4 +72,4 @@ attack_range = NodePath("../../AttackRange")
 
 [connection signal="health_changed" from="HealthComponent" to="." method="_on_health_component_health_changed"]
 [connection signal="health_depleted" from="HealthComponent" to="." method="_on_health_component_health_depleted"]
-[connection signal="max_health_changed" from="HealthComponent" to="." method="_on_health_component_max_health_changed"]
+[connection signal="taking_damage" from="HealthComponent" to="." method="_on_health_component_taking_damage"]
