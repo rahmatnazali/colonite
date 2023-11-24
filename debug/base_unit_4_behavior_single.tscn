@@ -54,7 +54,6 @@ target_scene = "res://debug/base_unit_4_behavior_multiple.tscn"
 
 [node name="BaseUnit1" parent="." instance=ExtResource("2_inmjx")]
 position = Vector2(291, 381)
-state_verbose_mode = true
 
 [node name="Enemy1" parent="." instance=ExtResource("2_inmjx")]
 position = Vector2(767, 185)
