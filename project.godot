@@ -14,7 +14,7 @@ config/name="colonite"
 config/description="Game project for Game Off 2023"
 run/main_scene="res://menu/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://assets/base_body.png"
+config/icon="res://assets/colonite_icon.png"
 
 [autoload]
 
