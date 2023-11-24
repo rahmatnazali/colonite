@@ -1,0 +1,235 @@
+[gd_scene load_steps=5 format=3 uid="uid://68nqi0cyl8ch"]
+
+[ext_resource type="Script" path="res://debug/base_unit_2_movement.gd" id="1_mckns"]
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="2_8726n"]
+[ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="3_okocc"]
+[ext_resource type="PackedScene" uid="uid://bsokpg2bw5uvx" path="res://components/ui/border_content.tscn" id="3_vtbn8"]
+
+[node name="base_unit_1_movement" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mckns")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "When they adds up, they become Colies!
+Their scale represent how strong they are."
+
+[node name="ButtonScenePrevious" parent="." instance=ExtResource("2_8726n")]
+layout_mode = 1
+offset_right = 45.0
+offset_bottom = 31.0
+text = "Prev"
+target_scene = "res://how_to_play/how_to_play_1.tscn"
+
+[node name="ButtonSceneNext" parent="." instance=ExtResource("2_8726n")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Next"
+target_scene = "res://debug/base_unit_3_collision.tscn"
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="BorderContent" parent="World" instance=ExtResource("3_vtbn8")]
+
+[node name="Colies" type="Node2D" parent="World"]
+
+[node name="BaseUnit" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(510, 457)
+rotation = 3.14159
+
+[node name="BaseUnit1" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(571, 336)
+rotation = 3.14159
+
+[node name="BaseUnit2" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(644, 235)
+
+[node name="BaseUnit3" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(734, 324)
+rotation = 1.5708
+
+[node name="BaseUnit4" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(385, 355)
+rotation = -1.5708
+
+[node name="BaseUnit5" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(652, 294)
+rotation = 0.785398
+scale = Vector2(3, 3)
+
+[node name="BaseUnit6" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(533, 256)
+rotation = -0.785395
+
+[node name="BaseUnit7" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(484, 377)
+rotation = -2.3562
+
+[node name="BaseUnit8" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(652, 417)
+rotation = 2.35619
+
+[node name="BaseUnit9" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(748, 153)
+rotation = 2.35619
+
+[node name="BaseUnit10" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(790, 580)
+rotation = 2.35619
+
+[node name="BaseUnit11" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(80, 143)
+rotation = 2.35619
+scale = Vector2(2, 2)
+
+[node name="BaseUnit12" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(110, 251)
+rotation = 2.35619
+
+[node name="BaseUnit13" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(398, 280)
+rotation = 2.35619
+
+[node name="BaseUnit14" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(470, 221)
+rotation = 2.35619
+scale = Vector2(2, 2)
+
+[node name="BaseUnit15" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(386, 438)
+rotation = 2.35619
+
+[node name="BaseUnit16" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(153, 544)
+rotation = 2.35619
+
+[node name="BaseUnit17" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(919, 327)
+rotation = 2.35619
+
+[node name="BaseUnit18" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(1028, 533)
+rotation = 2.35619
+
+[node name="BaseUnit19" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(1087, 154)
+rotation = 2.35619
+
+[node name="BaseUnit20" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(1029, 285)
+rotation = 2.35619
+
+[node name="BaseUnit21" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(769, 446)
+rotation = 2.35619
+scale = Vector2(2, 2)
+
+[node name="BaseUnit22" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(213, 371)
+rotation = 2.35619
+
+[node name="BaseUnit23" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(810, 225)
+rotation = 2.35619
+
+[node name="BaseUnit24" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(619, 534)
+rotation = 2.35619
+
+[node name="BaseUnit25" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(578, 158)
+rotation = 2.35619
+
+[node name="BaseUnit26" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(264, 145)
+rotation = 2.35619
+
+[node name="BaseUnit27" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(437, 128)
+rotation = 2.35619
+scale = Vector2(3, 3)
+
+[node name="BaseUnit28" parent="World/Colies" instance=ExtResource("3_okocc")]
+position = Vector2(325, 532)
+rotation = 2.35619
+
+[node name="BaseUnit29" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(75, 577)
+rotation = 2.35619
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit30" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(77, 457)
+rotation = 2.35619
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit31" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(204, 236)
+rotation = 2.35619
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit32" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(104, 363)
+rotation = 2.35619
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit33" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(910, 439)
+rotation = 2.35619
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit34" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(925, 171)
+rotation = 2.35619
+scale = Vector2(5, 5)
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit35" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(1092, 396)
+rotation = 2.35619
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit36" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(907, 560)
+rotation = 2.35619
+scale = Vector2(5, 5)
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit37" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(479, 605)
+rotation = 2.35619
+scale = Vector2(5, 5)
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
+
+[node name="BaseUnit38SuperBig" parent="World/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("3_okocc")]
+position = Vector2(231, 465)
+rotation = 2.35619
+scale = Vector2(10, 10)
+health_component = NodePath("../BaseUnit28/HealthComponent")
+attack_component = NodePath("../BaseUnit28/AttackComponent")
