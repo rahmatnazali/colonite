@@ -3,6 +3,7 @@ extends Node
 
 signal max_health_changed(max_health: int)
 signal health_changed(health: int)
+signal taking_damage
 signal health_depleted
 
 
@@ -51,6 +52,14 @@ func _ready():
 	if debug_health:
 		print('Instantiating HealthComponent for parent ', parent.name, ' in debug mode. Will be dead in couple of seconds.')
 		delayed_dead()
+
+
+func take_damage(damage: int = 1):
+	set_current_health(current_health - damage)
+	emit_signal('taking_damage')
+
+
+# === Debug ===
 
 
 func delayed_dead():
