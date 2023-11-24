@@ -56,7 +56,8 @@ func _ready():
 
 func take_damage(damage: int = 1):
 	set_current_health(current_health - damage)
-	emit_signal('taking_damage')
+	if current_health != 0:
+		emit_signal('taking_damage')
 
 
 # === Debug ===
