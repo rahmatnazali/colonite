@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cng8yewksr3xk"]
+[gd_scene load_steps=15 format=3 uid="uid://cng8yewksr3xk"]
 
 [ext_resource type="Script" path="res://components/unit/base_unit/base_unit.gd" id="1_bxnya"]
 [ext_resource type="Texture2D" uid="uid://bt0jajm413vkn" path="res://assets/base_body.png" id="2_2kicu"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_scan.gd" id="6_mrf16"]
 [ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_chase.gd" id="8_ei86w"]
 [ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_attack.gd" id="9_rvnmy"]
+[ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_consume.gd" id="11_b00hq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ftc2b"]
 radius = 6.0
@@ -79,6 +80,11 @@ attack_range = NodePath("../../AttackRange")
 script = ExtResource("9_rvnmy")
 character = NodePath("../..")
 attack_range = NodePath("../../AttackRange")
+consume_range = NodePath("../../ConsumeRange")
+
+[node name="Consume" type="Node" parent="GenericStateMachine" node_paths=PackedStringArray("character", "consume_range")]
+script = ExtResource("11_b00hq")
+character = NodePath("../..")
 consume_range = NodePath("../../ConsumeRange")
 
 [connection signal="health_depleted" from="HealthComponent" to="." method="_on_health_component_health_depleted"]
