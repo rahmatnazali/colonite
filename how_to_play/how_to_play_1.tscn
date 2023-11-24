@@ -25,22 +25,14 @@ text = "Meet Coly: a one-eyed cutie.
 She really likes to wander on a sunny day."
 horizontal_alignment = 1
 
-[node name="BaseUnit" parent="." instance=ExtResource("2_45qms")]
-position = Vector2(583, 197)
-scale = Vector2(7.76, 7.76)
-
-[node name="BaseUnit2" parent="." instance=ExtResource("2_45qms")]
-position = Vector2(580, 376)
-scale = Vector2(7.76, 7.76)
-
-[node name="ButtonScene2" parent="." instance=ExtResource("3_1vf7g")]
+[node name="ButtonScenePrevious" parent="." instance=ExtResource("3_1vf7g")]
 layout_mode = 1
-offset_right = 45.0
+offset_right = 157.0
 offset_bottom = 31.0
 text = "Back to Main Menu"
 target_scene = "res://menu/main_menu.tscn"
 
-[node name="ButtonScene" parent="." instance=ExtResource("3_1vf7g")]
+[node name="ButtonSceneNext" parent="." instance=ExtResource("3_1vf7g")]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -51,4 +43,10 @@ grow_horizontal = 0
 text = "Next"
 target_scene = "res://debug/base_unit_2_movement.tscn"
 
-[node name="BorderContent" parent="." instance=ExtResource("3_hxjng")]
+[node name="World" type="Node2D" parent="."]
+
+[node name="BorderContent" parent="World" instance=ExtResource("3_hxjng")]
+
+[node name="BaseUnit" parent="World" instance=ExtResource("2_45qms")]
+position = Vector2(583, 197)
+scale = Vector2(7.76, 7.76)
