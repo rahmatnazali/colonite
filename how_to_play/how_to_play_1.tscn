@@ -1,19 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://62kbe3xel7bp"]
+[gd_scene load_steps=4 format=3 uid="uid://62kbe3xel7bp"]
 
 [ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="2_45qms"]
 [ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="3_1vf7g"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhog4"]
-size = Vector2(1122, 8)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_en8dr"]
-size = Vector2(27.8846, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb8up"]
-size = Vector2(20, 546)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ou4w"]
-size = Vector2(8, 20)
+[ext_resource type="PackedScene" uid="uid://bsokpg2bw5uvx" path="res://components/ui/border_content.tscn" id="3_hxjng"]
 
 [node name="HowToPlay1" type="Control"]
 layout_mode = 3
@@ -62,31 +51,4 @@ grow_horizontal = 0
 text = "Next"
 target_scene = "res://debug/base_unit_2_movement.tscn"
 
-[node name="CollisionBorder" type="Node2D" parent="."]
-
-[node name="Up" type="StaticBody2D" parent="CollisionBorder"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Up"]
-position = Vector2(577, 82)
-shape = SubResource("RectangleShape2D_rhog4")
-
-[node name="Left" type="StaticBody2D" parent="CollisionBorder"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Left"]
-position = Vector2(580, 624)
-scale = Vector2(39.52, 0.320002)
-shape = SubResource("RectangleShape2D_en8dr")
-
-[node name="Down" type="StaticBody2D" parent="CollisionBorder"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Down"]
-position = Vector2(25, 355)
-scale = Vector2(0.4, 1)
-shape = SubResource("RectangleShape2D_rb8up")
-
-[node name="Right" type="StaticBody2D" parent="CollisionBorder"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Right"]
-position = Vector2(1128, 352)
-scale = Vector2(1, 27.72)
-shape = SubResource("RectangleShape2D_3ou4w")
+[node name="BorderContent" parent="." instance=ExtResource("3_hxjng")]
