@@ -14,6 +14,7 @@ var current_speed: int
 @export var speed_normal: int = 50
 @export var speed_chase: int = 500
 @export var speed_attacking: int = 0
+@export var speed_consuming: int = 5
 
 @export var EYE_COLOR = Color.BLACK
 @export var BODY_COLOR = Color.WHITE
@@ -27,6 +28,9 @@ var current_speed: int
 @export var verbose_mode: bool = false
 @export var state_verbose_mode: bool = false
 @export var debug_health: bool = false
+
+
+var is_being_consumed: bool = false
 
 
 func start_moving():
@@ -70,6 +74,19 @@ func _physics_process(_delta):
 	pass
 
 
+# == Level & Stats Modifier ==
+
+
+func level_up():
+	var level_up_tween = create_tween()
+	level_up_tween.tween_property(self, 'scale', Vector2(1.5, 1.5), 0.5)
+	health_component.set_max_health(health_component.max_health + 10)
+	health_component.set_current_health(health_component.max_health)
+
+
+# == Health Change ==
+
+
 func _on_health_component_health_depleted():
 	# handle die
 	if verbose_mode: print(name, ' is dead')
@@ -97,6 +114,23 @@ func play_taking_damage_animation():
 	var taking_damage_tween = create_tween()
 	taking_damage_tween.tween_property($Body, 'modulate', Color.RED, 0.05)
 	taking_damage_tween.tween_property($Body, 'modulate', BODY_COLOR, 0.05)
+
+
+# == Consuming & Being Consumed ==
+
+func consuming():
+	level_up()
+
+
+func being_consumed(consume_time: int = 5):
+	if is_being_consumed == false:
+		is_being_consumed = true
+		var being_consumed_tween = create_tween()
+		being_consumed_tween.tween_property(self, 'scale', Vector2(0.3, 0.3), consume_time)
+		being_consumed_tween.tween_callback(queue_free)
+		return true
+	else:
+		return false
 
 
 # === Utils ===
