@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci7ynwtyxhas4"]
+
+[ext_resource type="Script" path="res://components/stats/attack_component.gd" id="1_apkiq"]
+
+[node name="AttackComponent" type="Node"]
+script = ExtResource("1_apkiq")
+
+[node name="AttackCooldown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
