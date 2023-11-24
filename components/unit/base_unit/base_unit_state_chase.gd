@@ -19,6 +19,8 @@ func enter(payload = null):
 
 	if character.state_verbose_mode: 
 		print(character.name, ': entering chase state with payload: ', payload)
+	
+	GlobalAudioPlayer.play_chase_sound()
 
 
 func physics_update(_delta):
