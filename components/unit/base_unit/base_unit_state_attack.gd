@@ -29,12 +29,11 @@ func physics_update(_delta):
 			if is_attack_succeed:
 				target_unit.health_component.take_damage(character.attack_component.get_damage())
 	elif target_unit.is_alive:
-		# alive but not in range
+		# alive but not in range --> should keep chasing it
 		transitioned.emit(self, 'chase', target_unit)
 	elif target_unit.is_alive == false and target_unit in consume_range.get_overlapping_bodies():
-		# todo
-		# should attempt to consume
-		print('attempt to consume')
+		# attempt to consume
+		transitioned.emit(self, 'consume', target_unit)
 	else:
 		# back to wandering
 		transitioned.emit(self, 'wander')
