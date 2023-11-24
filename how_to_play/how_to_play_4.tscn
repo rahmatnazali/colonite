@@ -1,0 +1,146 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0w6xv0asoodd"]
+
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="1_d78c2"]
+[ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="2_gngon"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yvdi"]
+size = Vector2(1122, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2h4h"]
+size = Vector2(27.8846, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xk1m"]
+size = Vector2(20, 546)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67sea"]
+size = Vector2(8, 20)
+
+[node name="HowToPlay4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -137.0
+offset_right = 137.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "Together, they make a good team!"
+
+[node name="ButtonScenePrevious" parent="." instance=ExtResource("1_d78c2")]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 31.0
+text = "Prev"
+target_scene = "res://how_to_play/how_to_play_3.tscn"
+
+[node name="BaseUnit1" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(291, 381)
+
+[node name="BaseUnit2" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(437, 200)
+
+[node name="BaseUnit3" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(325, 169)
+
+[node name="BaseUnit4" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(386, 282)
+
+[node name="BaseUnit5" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(278, 265)
+
+[node name="BaseUnit6" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(164, 441)
+
+[node name="BaseUnit7" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(115, 159)
+
+[node name="BaseUnit8" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(132, 254)
+
+[node name="BaseUnit9" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(109, 526)
+
+[node name="BaseUnit10" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(318, 559)
+
+[node name="BaseUnit11" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(425, 460)
+
+[node name="BaseUnit12" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(481, 335)
+
+[node name="BaseUnit13" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(501, 140)
+
+[node name="BaseUnit14" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(144, 338)
+
+[node name="BaseUnit15" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(223, 180)
+
+[node name="Enemy1" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(767, 185)
+team = 2
+BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(728, 306)
+team = 2
+BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(822, 435)
+team = 2
+BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy4" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(806, 283)
+team = 2
+BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy5" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(751, 391)
+team = 2
+BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy6" parent="." instance=ExtResource("2_gngon")]
+position = Vector2(850, 230)
+team = 2
+BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+
+[node name="CollisionBorder" type="Node2D" parent="."]
+
+[node name="Up" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Up"]
+position = Vector2(577, 82)
+shape = SubResource("RectangleShape2D_0yvdi")
+
+[node name="Left" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Left"]
+position = Vector2(580, 624)
+scale = Vector2(39.52, 0.320002)
+shape = SubResource("RectangleShape2D_y2h4h")
+
+[node name="Down" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Down"]
+position = Vector2(25, 355)
+scale = Vector2(0.4, 1)
+shape = SubResource("RectangleShape2D_3xk1m")
+
+[node name="Right" type="StaticBody2D" parent="CollisionBorder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorder/Right"]
+position = Vector2(1128, 352)
+scale = Vector2(1, 27.72)
+shape = SubResource("RectangleShape2D_67sea")

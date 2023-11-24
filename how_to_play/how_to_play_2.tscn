@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="3_okocc"]
 [ext_resource type="PackedScene" uid="uid://bsokpg2bw5uvx" path="res://components/ui/border_content.tscn" id="3_vtbn8"]
 
-[node name="base_unit_1_movement" type="Control"]
+[node name="HowToPlay2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,7 +42,7 @@ offset_left = -45.0
 offset_bottom = 31.0
 grow_horizontal = 0
 text = "Next"
-target_scene = "res://debug/base_unit_3_collision.tscn"
+target_scene = "res://how_to_play/how_to_play_3.tscn"
 
 [node name="World" type="Node2D" parent="."]
 
