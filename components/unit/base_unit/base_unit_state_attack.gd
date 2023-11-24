@@ -28,6 +28,7 @@ func physics_update(_delta):
 			var is_attack_succeed = character.attack_component.attack()
 			if is_attack_succeed:
 				target_unit.health_component.take_damage(character.attack_component.get_damage())
+				GlobalAudioPlayer.play_attack_sound()
 	elif target_unit.is_alive:
 		# alive but not in range --> should keep chasing it
 		transitioned.emit(self, 'chase', target_unit)
