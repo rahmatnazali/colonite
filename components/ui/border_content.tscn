@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsokpg2bw5uvx"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_f3rf5"]
+b = Vector2(0.00100711, 20.6637)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_e63l3"]
+b = Vector2(0, 31.3043)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hmqls"]
+b = Vector2(0, 10.0186)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c5mty"]
+b = Vector2(-0.000976563, 10.0792)
+
+[node name="BorderContent" type="Node2D"]
+
+[node name="BorderUp" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderUp"]
+position = Vector2(5.96046e-08, 106)
+rotation = -1.5708
+scale = Vector2(2, 55.75)
+shape = SubResource("SegmentShape2D_f3rf5")
+
+[node name="BorderLeft" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderLeft"]
+scale = Vector2(2, 20.7)
+shape = SubResource("SegmentShape2D_e63l3")
+
+[node name="BorderRight" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderRight"]
+position = Vector2(1152, 0)
+scale = Vector2(2, 64.68)
+shape = SubResource("SegmentShape2D_hmqls")
+
+[node name="BorderDown" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderDown"]
+position = Vector2(0, 648)
+rotation = -1.5708
+scale = Vector2(2, 114.295)
+shape = SubResource("SegmentShape2D_c5mty")
