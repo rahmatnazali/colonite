@@ -2,14 +2,14 @@ extends Control
 
 
 func _ready():
-	make_icon_invisible()
+	# disable start button for now
+	$Container/ButtonContainer/StartButtonScene.disabled = true
+	
+	# make BrandingIcon invisible (for now, it only being needed to bump te VContainerBox
+	$Container/HeadingContainer/BrandingIcon.modulate = Color('000000', 0)
 	
 	var icon_tween = create_tween()
 	icon_tween.tween_callback(make_icon_blink).set_delay(5)
-
-
-func make_icon_invisible():
-	$Container/HeadingContainer/BrandingIcon.modulate = Color('000000', 0)
 
 
 func make_icon_blink():
