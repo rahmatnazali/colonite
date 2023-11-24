@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://60dp1wux6pol"]
+[gd_scene load_steps=5 format=3 uid="uid://60dp1wux6pol"]
 
 [ext_resource type="Script" path="res://globals/global_audio_player.gd" id="1_8sl07"]
 [ext_resource type="AudioStream" uid="uid://crhpnca7rh268" path="res://sound/click_robotic.wav" id="2_h2dd7"]
 [ext_resource type="AudioStream" uid="uid://bcj56jpkc450s" path="res://sound/power-up.wav" id="3_kvvve"]
+[ext_resource type="AudioStream" uid="uid://bgi3me0og53g1" path="res://sound/jump-1.wav" id="4_1gvu5"]
 
 [node name="GlobalAudioPlayer" type="Node"]
 script = ExtResource("1_8sl07")
@@ -12,3 +13,6 @@ stream = ExtResource("2_h2dd7")
 
 [node name="PowerUpPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_kvvve")
+
+[node name="ChasePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1gvu5")
