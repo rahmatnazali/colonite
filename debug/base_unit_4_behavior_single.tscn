@@ -60,7 +60,6 @@ state_verbose_mode = true
 position = Vector2(767, 185)
 team = 2
 BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
-debug_health = true
 
 [node name="CollisionBorder" type="Node2D" parent="."]
 
