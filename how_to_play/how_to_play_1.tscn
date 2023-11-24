@@ -41,7 +41,7 @@ offset_left = -45.0
 offset_bottom = 31.0
 grow_horizontal = 0
 text = "Next"
-target_scene = "res://debug/base_unit_2_movement.tscn"
+target_scene = "res://how_to_play/how_to_play_2.tscn"
 
 [node name="World" type="Node2D" parent="."]
 
