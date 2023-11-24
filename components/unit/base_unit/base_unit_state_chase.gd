@@ -20,7 +20,9 @@ func enter(payload = null):
 	if character.state_verbose_mode: 
 		print(character.name, ': entering chase state with payload: ', payload)
 	
-	GlobalAudioPlayer.play_chase_sound()
+	# play the chase sound only if distance is longer than 100 pixels, so not to overplay
+	if character.global_position.distance_to(target_unit.global_position) > 100:
+		GlobalAudioPlayer.play_chase_sound()
 
 
 func physics_update(_delta):
