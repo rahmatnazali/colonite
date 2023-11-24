@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://crhpnca7rh268" path="res://sound/click_robotic.wav" id="2_h2dd7"]
 [ext_resource type="AudioStream" uid="uid://bcj56jpkc450s" path="res://sound/power-up.wav" id="3_kvvve"]
 [ext_resource type="AudioStream" uid="uid://bgi3me0og53g1" path="res://sound/jump-1.wav" id="4_1gvu5"]
+[ext_resource type="AudioStream" uid="uid://disad2w6mw60p" path="res://sound/attack-1.wav" id="5_nbx8s"]
 
 [node name="GlobalAudioPlayer" type="Node"]
 script = ExtResource("1_8sl07")
@@ -16,3 +17,6 @@ stream = ExtResource("3_kvvve")
 
 [node name="ChasePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_1gvu5")
+
+[node name="AttackPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_nbx8s")
