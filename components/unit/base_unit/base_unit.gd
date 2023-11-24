@@ -89,13 +89,17 @@ func _physics_process(_delta):
 
 
 func level_up():
+	var new_scale = scale * Vector2(1.5, 1.5)
+	var new_max_health = health_component.max_health + 2
+	var new_damage = attack_component.get_damage() + 2
+	
 	var level_up_tween = create_tween()
-	level_up_tween.set_parallel(true)
-	level_up_tween.tween_property(self, 'scale', Vector2(1.5, 1.5), 0.3)
-	level_up_tween.tween_callback(GlobalAudioPlayer.play_power_up_sound)
-	health_component.set_max_health(health_component.max_health + 10)
+	level_up_tween.tween_property(self, 'scale', new_scale, 0.3)
+	GlobalAudioPlayer.play_power_up_sound()
+
+	health_component.set_max_health(new_max_health)
 	health_component.set_current_health(health_component.max_health)
-	attack_component.set_damage(attack_component.get_damage() * 2)
+	attack_component.set_damage(new_damage)
 
 
 # == Health Change ==
