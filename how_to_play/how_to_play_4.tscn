@@ -100,32 +100,32 @@ position = Vector2(223, 180)
 [node name="Enemy1" parent="." instance=ExtResource("2_gngon")]
 position = Vector2(767, 185)
 team = 2
-BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+body_color = Color(1, 0.376471, 0.309804, 1)
 
 [node name="Enemy2" parent="." instance=ExtResource("2_gngon")]
 position = Vector2(728, 306)
 team = 2
-BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+body_color = Color(1, 0.376471, 0.309804, 1)
 
 [node name="Enemy3" parent="." instance=ExtResource("2_gngon")]
 position = Vector2(822, 435)
 team = 2
-BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+body_color = Color(1, 0.376471, 0.309804, 1)
 
 [node name="Enemy4" parent="." instance=ExtResource("2_gngon")]
 position = Vector2(806, 283)
 team = 2
-BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+body_color = Color(1, 0.376471, 0.309804, 1)
 
 [node name="Enemy5" parent="." instance=ExtResource("2_gngon")]
 position = Vector2(751, 391)
 team = 2
-BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+body_color = Color(1, 0.376471, 0.309804, 1)
 
 [node name="Enemy6" parent="." instance=ExtResource("2_gngon")]
 position = Vector2(850, 230)
 team = 2
-BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+body_color = Color(1, 0.376471, 0.309804, 1)
 
 [node name="CollisionBorder" type="Node2D" parent="."]
 

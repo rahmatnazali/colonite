@@ -61,7 +61,7 @@ position = Vector2(291, 381)
 [node name="Enemy1" parent="." instance=ExtResource("2_o5ala")]
 position = Vector2(767, 185)
 team = 2
-BODY_COLOR = Color(1, 0.376471, 0.309804, 1)
+body_color = Color(1, 0.376471, 0.309804, 1)
 
 [node name="CollisionBorder" type="Node2D" parent="."]
 
