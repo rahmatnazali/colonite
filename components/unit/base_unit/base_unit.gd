@@ -16,9 +16,8 @@ var current_speed: int
 @export var speed_attacking: int = 0
 @export var speed_consuming: int = 5
 
-@export var EYE_COLOR = Color.BLACK
-@export var BODY_COLOR = Color.WHITE
-@export var BARRIER_COLOR = Color.GRAY
+@export var starting_position: Vector2 = Vector2.ZERO
+
 @export var eye_color = Color.BLACK
 @export var body_color = Color.WHITE
 @export var barrier_color = Color.GRAY
@@ -53,12 +52,14 @@ func disable_state():
 
 
 func initialize_color():
-	$Eye.modulate = EYE_COLOR
-	$Body.modulate = BODY_COLOR
-	$Barrier.modulate = BARRIER_COLOR
 	$Eye.modulate = eye_color
 	$Body.modulate = body_color
 	$Barrier.modulate = barrier_color
+
+
+func initialize_starting_position():
+	if starting_position != Vector2.ZERO:
+		self.global_position = starting_position
 
 
 # Given a normalized direction, BaseUnit will look at it and move towards it with assigned speed
@@ -84,6 +85,7 @@ func move_towards_position(target_position: Vector2):
 
 func _ready():
 	initialize_color()
+	initialize_starting_position()
 	current_speed = speed_normal
 
 
