@@ -5,9 +5,6 @@ func _ready():
 	# disable start button for now
 	$Container/ButtonContainer/StartButtonScene.disabled = true
 	
-	# disable setting button for now
-	$Container/ButtonContainer/SettingsButtonScene.disabled = true
-	
 	# make BrandingIcon invisible (for now, it only being needed to bump te VContainerBox
 	$Container/HeadingContainer/BrandingIcon.modulate = Color('000000', 0)
 	

@@ -20,3 +20,7 @@ config/icon="res://assets/colonite_icon.png"
 
 GlobalAudioPlayer="*res://globals/global_audio_player.tscn"
 GlobalUtilities="*res://globals/global_utilities.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
