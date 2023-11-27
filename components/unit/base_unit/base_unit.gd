@@ -19,6 +19,9 @@ var current_speed: int
 @export var EYE_COLOR = Color.BLACK
 @export var BODY_COLOR = Color.WHITE
 @export var BARRIER_COLOR = Color.GRAY
+@export var eye_color = Color.BLACK
+@export var body_color = Color.WHITE
+@export var barrier_color = Color.GRAY
 
 
 @export var health_component: Node
@@ -53,6 +56,9 @@ func initialize_color():
 	$Eye.modulate = EYE_COLOR
 	$Body.modulate = BODY_COLOR
 	$Barrier.modulate = BARRIER_COLOR
+	$Eye.modulate = eye_color
+	$Body.modulate = body_color
+	$Barrier.modulate = barrier_color
 
 
 # Given a normalized direction, BaseUnit will look at it and move towards it with assigned speed
@@ -132,7 +138,7 @@ func _on_health_component_taking_damage():
 func play_taking_damage_animation():
 	var taking_damage_tween = create_tween()
 	taking_damage_tween.tween_property($Body, 'modulate', Color.RED, 0.05)
-	taking_damage_tween.tween_property($Body, 'modulate', BODY_COLOR, 0.05)
+	taking_damage_tween.tween_property($Body, 'modulate', body_color, 0.05)
 
 
 # == Consuming & Being Consumed ==
