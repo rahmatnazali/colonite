@@ -69,6 +69,11 @@ layout_mode = 2
 text = "Start"
 target_scene = "res://levels/level_1.tscn"
 
+[node name="FreeArenaButtonScene" parent="Container/ButtonContainer" instance=ExtResource("4_ff1qp")]
+layout_mode = 2
+text = "Free Arena"
+target_scene = "res://debug/debug_free_arena.tscn"
+
 [node name="HowToPlayButtonScene" parent="Container/ButtonContainer" instance=ExtResource("4_ff1qp")]
 layout_mode = 2
 text = "How to Play"
@@ -86,7 +91,7 @@ target_scene = "res://menu/settings.tscn"
 [node name="Colies" type="Node2D" parent="Arena"]
 
 [node name="BaseUnitBig" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
-position = Vector2(576, 198)
+position = Vector2(576, 181)
 rotation = -0.785398
 scale = Vector2(8.16001, 8.16001)
 should_move = false
