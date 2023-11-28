@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkqhwhn3n3alw"]
+[gd_scene load_steps=4 format=3 uid="uid://dkqhwhn3n3alw"]
 
 [ext_resource type="Script" path="res://debug/debug_free_arena.gd" id="1_bs86y"]
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="2_nfxqf"]
 [ext_resource type="PackedScene" uid="uid://cph6t58p7p6np" path="res://components/ui/border_full.tscn" id="2_s58i7"]
 
 [node name="FreeArena" type="Control"]
@@ -35,24 +36,40 @@ horizontal_alignment = 1
 
 [node name="Instruction" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Left click: spawn blue coly
-Right click: spawn orange coly
-Middle click: spawn pink coly
-Scroll up: spawn green coly
-Scoll down: spawn yellow coly"
+text = "Left click: spawn 5 blue coly
+Right click: spawn 5 orange coly
+Middle click: spawn 5 pink coly
+Scroll up: spawn 5 green coly
+Scoll down: spawn 5 yellow coly"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="BackToMenuButtonScene" parent="." instance=ExtResource("2_nfxqf")]
+layout_mode = 2
+offset_right = 62.0
+offset_bottom = 31.0
+text = "Back to Menu"
+target_scene = "res://menu/main_menu.tscn"
+
 [node name="Stats" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
 offset_bottom = 40.0
+grow_horizontal = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Stats"]
 layout_mode = 1
-offset_left = 10.0
-offset_right = 86.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -38.0
+offset_right = 38.0
 offset_bottom = 40.0
+grow_horizontal = 2
 
 [node name="ResourceUI" type="Control" parent="Stats/HBoxContainer"]
 layout_mode = 2
