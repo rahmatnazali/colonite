@@ -15,10 +15,16 @@ func make_icon_blink():
 	var target_eye_scale = original_eye_scale * Vector2(0.3, 0.3)
 	
 	var blink_tween = create_tween()
+	
 	blink_tween.tween_property($Arena/Colies/BaseUnitBig/Eye, 'scale', target_eye_scale, 0.1)
 	blink_tween.tween_property($Arena/Colies/BaseUnitBig/Eye, 'scale', original_eye_scale, 0.1)
 	blink_tween.tween_property($Arena/Colies/BaseUnitBig/Eye, 'scale', target_eye_scale, 0.1)
 	blink_tween.tween_property($Arena/Colies/BaseUnitBig/Eye, 'scale', original_eye_scale, 0.1)
+	blink_tween.tween_property($Arena/Colies/BaseUnitBig/Eye, 'scale', target_eye_scale, 0.1)
+	blink_tween.tween_property($Arena/Colies/BaseUnitBig/Eye, 'scale', original_eye_scale, 0.1)
+	blink_tween.tween_property($Arena/Colies/BaseUnitBig/Eye, 'scale', target_eye_scale, 0.1)
+	blink_tween.tween_property($Arena/Colies/BaseUnitBig/Eye, 'scale', original_eye_scale, 0.1)
+
 	blink_tween.tween_callback(make_icon_moveable).set_delay(1)
 
 
