@@ -36,11 +36,11 @@ horizontal_alignment = 1
 
 [node name="Instruction" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Left click: spawn 5 white coly
-Right click: spawn 5 orange coly
-Middle click: spawn 5 pink coly
-Scroll up: spawn 5 green coly
-Scoll down: spawn 5 yellow coly"
+text = "Left click: spawn 5 white colies
+Right click: spawn 5 orange colies
+Middle click: spawn 5 pink colies
+Scroll up: spawn 5 green colies
+Scoll down: spawn 5 yellow colies"
 horizontal_alignment = 1
 vertical_alignment = 1
 
