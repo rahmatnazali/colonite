@@ -16,9 +16,10 @@ script = ExtResource("1_sryg2")
 
 [node name="PreviousButtonScene" parent="." instance=ExtResource("2_wilh6")]
 layout_mode = 1
-offset_right = 62.0
+offset_right = 157.0
 offset_bottom = 31.0
 text = "Back to Main menu"
+target_scene = "res://menu/main_menu.tscn"
 
 [node name="Instruction" type="Label" parent="."]
 layout_mode = 1
