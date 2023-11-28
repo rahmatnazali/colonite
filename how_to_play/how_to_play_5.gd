@@ -53,7 +53,7 @@ func _input(event):
 				spawn_base_unit(spawn_position, spawn_team, spawn_color, 1)
 		elif  event.button_index == 2:
 			# spawn 5
-			var has_enough_resource = GlobalStatsManager.purchase_base_unit()
+			var has_enough_resource = GlobalStatsManager.purchase_base_unit(5)
 			if has_enough_resource:
 				spawn_base_unit(spawn_position, spawn_team, spawn_color, 5)
 
