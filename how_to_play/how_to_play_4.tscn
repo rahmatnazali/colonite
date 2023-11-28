@@ -33,6 +33,7 @@ offset_right = 137.0
 offset_bottom = 26.0
 grow_horizontal = 2
 text = "Together, they make a good team!"
+horizontal_alignment = 1
 
 [node name="ButtonScenePrevious" parent="." instance=ExtResource("1_d78c2")]
 layout_mode = 0
@@ -46,11 +47,11 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -157.0
+offset_left = -45.0
 offset_bottom = 31.0
 grow_horizontal = 0
-text = "Back to Main Menu"
-target_scene = "res://menu/main_menu.tscn"
+text = "Next"
+target_scene = "res://how_to_play/how_to_play_5.tscn"
 
 [node name="BaseUnit1" parent="." instance=ExtResource("2_gngon")]
 position = Vector2(291, 381)

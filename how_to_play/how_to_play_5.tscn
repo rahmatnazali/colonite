@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdhg57j71e4mt"]
+
+[ext_resource type="Script" path="res://how_to_play/how_to_play_5.gd" id="1_2ld0a"]
+[ext_resource type="PackedScene" uid="uid://r275w3l6osq3" path="res://components/ui/button_scene.tscn" id="1_j8hkm"]
+[ext_resource type="PackedScene" uid="uid://cng8yewksr3xk" path="res://components/unit/base_unit/base_unit.tscn" id="2_emdcj"]
+[ext_resource type="PackedScene" uid="uid://bsokpg2bw5uvx" path="res://components/ui/border_content.tscn" id="4_54n44"]
+
+[node name="HowToPlay5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ld0a")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -293.0
+offset_top = -3.0
+offset_right = 293.0
+offset_bottom = 101.0
+grow_horizontal = 2
+text = "Left click to spawn a Coly. Right Click to spawn 5 Colies.
+Resource is needed to spawn them. Gain resource by consuming other unit.
+With limited starting resource, find the best spawn position & strategy
+to help Colies beat all the outsiders."
+horizontal_alignment = 1
+
+[node name="ButtonScenePrevious" parent="." instance=ExtResource("1_j8hkm")]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 31.0
+text = "Prev"
+target_scene = "res://how_to_play/how_to_play_4.tscn"
+
+[node name="ButtonSceneNext" parent="." instance=ExtResource("1_j8hkm")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -157.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Back to Main Menu"
+target_scene = "res://menu/main_menu.tscn"
+
+[node name="Worlds" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Enemy1" parent="Worlds" instance=ExtResource("2_emdcj")]
+position = Vector2(940, 253)
+team = 2
+body_color = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy2" parent="Worlds" instance=ExtResource("2_emdcj")]
+position = Vector2(901, 374)
+team = 2
+body_color = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy3" parent="Worlds" instance=ExtResource("2_emdcj")]
+position = Vector2(995, 503)
+team = 2
+body_color = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy4" parent="Worlds" instance=ExtResource("2_emdcj")]
+position = Vector2(979, 351)
+team = 2
+body_color = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy5" parent="Worlds" instance=ExtResource("2_emdcj")]
+position = Vector2(924, 459)
+team = 2
+body_color = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Enemy6" parent="Worlds" instance=ExtResource("2_emdcj")]
+position = Vector2(1023, 298)
+team = 2
+body_color = Color(1, 0.376471, 0.309804, 1)
+
+[node name="Stats" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_top = 51.0
+offset_right = 40.0
+offset_bottom = 101.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Stats"]
+layout_mode = 1
+offset_left = 10.0
+offset_right = 86.0
+offset_bottom = 40.0
+
+[node name="ResourceUI" type="Control" parent="Stats/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Stats/HBoxContainer/ResourceUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ResourceName" type="Label" parent="Stats/HBoxContainer/ResourceUI/HBoxContainer"]
+layout_mode = 2
+text = "Resource:"
+
+[node name="ResourceValue" type="Label" parent="Stats/HBoxContainer/ResourceUI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "-"
+
+[node name="BorderContent" parent="." instance=ExtResource("4_54n44")]
