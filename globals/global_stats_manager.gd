@@ -30,5 +30,5 @@ func purchase_base_unit(amount: int = 1) -> bool:
 
 
 func base_unit_consumed():
-	set_resource(resource + base_unit_cost * 4)
+	set_resource(resource + base_unit_cost * 1)
 
