@@ -2,9 +2,6 @@ extends Control
 
 
 func _ready():
-	# disable start button for now
-	$Container/ButtonContainer/StartButtonScene.disabled = true
-	
 	# make BrandingIcon invisible (for now, it only being needed to bump te VContainerBox
 	$Container/HeadingContainer/BrandingIcon.modulate = Color('000000', 0)
 	
