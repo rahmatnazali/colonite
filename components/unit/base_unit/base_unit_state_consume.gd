@@ -50,6 +50,8 @@ func physics_update(_delta):
 		if is_consuming == true:
 			is_consuming = false
 			character.level_up()
+			if character.team == 1:
+				GlobalStatsManager.base_unit_consumed()
 		
 		# in the end just back to wandering
 		transitioned.emit(self, 'wander')
