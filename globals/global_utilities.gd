@@ -1,6 +1,21 @@
 extends Node
 
 
+func get_color_from_team(team_number: int):
+	if team_number == 1:
+		return Color.DEEP_SKY_BLUE
+	elif team_number == 2:
+		return Color.ORANGE_RED
+	elif team_number == 3:
+		return Color.INDIAN_RED
+	elif team_number == 4:
+		return Color.GREEN_YELLOW
+	elif team_number == 5:
+		return Color.YELLOW
+	else:
+		return Color.WHITE
+
+
 func get_distance_between_node(first: Node2D, second: Node2D) -> float:
 	return first.global_position.distance_to(second.global_position)
 
