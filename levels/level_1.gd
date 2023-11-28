@@ -37,14 +37,14 @@ func _ready():
 
 
 func initialize_enemy():
-	for i in range(35):
+	for i in range(40):
 		var base_unit_instance = base_unit_scene.instantiate()
 		base_unit_instance.starting_position = %SpawnMarker1.global_position
 		base_unit_instance.team = 2
 		base_unit_instance.body_color = Color('f77975')
 		%Units.add_child(base_unit_instance)
 
-	for i in range(35):
+	for i in range(40):
 		var base_unit_instance = base_unit_scene.instantiate()
 		base_unit_instance.starting_position = %SpawnMarker2.global_position
 		base_unit_instance.team = 2
