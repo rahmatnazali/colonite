@@ -12,15 +12,20 @@ script = ExtResource("1_8sl07")
 
 [node name="MouseClickPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_h2dd7")
+volume_db = -20.0
 
 [node name="PowerUpPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_20wck")
+volume_db = -20.0
 
 [node name="ChasePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_uiqca")
+volume_db = -30.0
 
 [node name="AttackPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_nbx8s")
+volume_db = -20.0
 
 [node name="DeadPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_jrcrd")
+volume_db = -20.0
