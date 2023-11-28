@@ -3,7 +3,8 @@ extends Node
 
 func get_color_from_team(team_number: int):
 	if team_number == 1:
-		return Color.DEEP_SKY_BLUE
+		return Color.WHITE
+		#return Color.DEEP_SKY_BLUE
 	elif team_number == 2:
 		return Color.ORANGE_RED
 	elif team_number == 3:
