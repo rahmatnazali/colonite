@@ -24,8 +24,8 @@ func consume_resource(resource_amount: int) -> bool:
 	return false
 
 
-func purchase_base_unit() -> bool:
-	var has_enough_resource = consume_resource(base_unit_cost)
+func purchase_base_unit(amount: int = 1) -> bool:
+	var has_enough_resource = consume_resource(base_unit_cost * amount)
 	return has_enough_resource
 
 
