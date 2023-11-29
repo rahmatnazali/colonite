@@ -2,6 +2,9 @@ extends Control
 
 
 func _ready():
+	# show application version
+	%VersionLabel.text = str(GlobalUtilities.application_version)
+	
 	# make BrandingIcon invisible (for now, it only being needed to bump te VContainerBox
 	$Container/HeadingContainer/BrandingIcon.modulate = Color('000000', 0)
 	

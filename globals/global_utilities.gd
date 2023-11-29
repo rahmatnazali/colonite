@@ -1,6 +1,9 @@
 extends Node
 
 
+var application_version: String = '0.0.3'
+
+
 func get_color_from_team(team_number: int):
 	if team_number == 1:
 		return Color.WHITE
