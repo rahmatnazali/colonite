@@ -58,4 +58,28 @@ offset_bottom = 51.0
 text = "Back"
 target_scene = "res://menu/main_menu.tscn"
 
+[node name="CreditContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CreditText" type="Label" parent="CreditContainer"]
+layout_mode = 2
+text = "A game project for GitHub's Game Off 2023 by "
+
+[node name="CreditLinkButton" type="Button" parent="CreditContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.580392, 0.603922, 1, 1)
+text = "rahmatnazali"
+flat = true
+
 [connection signal="toggled" from="MainContainer/SettingsContainer/HBoxContainer/FullScreenCheckButton" to="." method="_on_full_screen_check_button_toggled"]
+[connection signal="pressed" from="CreditContainer/CreditLinkButton" to="." method="_on_credit_link_button_pressed"]

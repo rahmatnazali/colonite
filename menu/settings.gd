@@ -19,3 +19,8 @@ func _on_full_screen_check_button_toggled(supplied_is_fullscreen):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func _on_credit_link_button_pressed():
+	OS.shell_open('https://github.com/rahmatnazali/colonite')
+
