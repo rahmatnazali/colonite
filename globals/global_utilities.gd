@@ -1,7 +1,7 @@
 extends Node
 
 
-var application_version: String = '0.0.3'
+var application_version: String = '0.0.4'
 
 
 func get_color_from_team(team_number: int):
