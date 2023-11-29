@@ -5,7 +5,7 @@
 
 # Colonite
 
-Meet Coly: a one-eyed cutie that like to wander endlessly. Together with each other, they form a colony: a Colies!
+Meet Coly: a one-eyed cutie that like to wander endlessly. Together, they form a colony: a Colies!
 
 Colies didn't like outsiders. With limited resource to spawn them, find the best spawning strategy to beat all the outsiders.
 
