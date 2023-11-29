@@ -98,13 +98,19 @@ func _physics_process(_delta):
 
 func level_up():
 	var new_scale = scale * Vector2(1.5, 1.5)
+	
+	# check for upper bound scale to avoid out of frame sizing
+	# max scale should be around 10-20
+	if new_scale.x >= 15:
+		new_scale = Vector2(15, 15)
+	
 	var new_max_health = health_component.max_health + 2
 	var new_damage = attack_component.get_damage() + 2
 	
 	var level_up_tween = create_tween()
 	level_up_tween.tween_property(self, 'scale', new_scale, 0.3)
 	GlobalAudioPlayer.play_power_up_sound()
-
+	
 	health_component.set_max_health(new_max_health)
 	health_component.set_current_health(health_component.max_health)
 	attack_component.set_damage(new_damage)
