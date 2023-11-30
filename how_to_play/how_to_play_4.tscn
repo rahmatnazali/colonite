@@ -42,77 +42,81 @@ grow_horizontal = 0
 text = "Next"
 target_scene = "res://how_to_play/how_to_play_5.tscn"
 
-[node name="BaseUnit1" parent="." instance=ExtResource("2_gngon")]
+[node name="World" type="Node2D" parent="."]
+
+[node name="BorderContent" parent="World" instance=ExtResource("2_frbu4")]
+
+[node name="BaseUnit1" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(291, 381)
 
-[node name="BaseUnit2" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit2" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(437, 200)
 
-[node name="BaseUnit3" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit3" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(325, 169)
 
-[node name="BaseUnit4" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit4" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(386, 282)
 
-[node name="BaseUnit5" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit5" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(278, 265)
 
-[node name="BaseUnit6" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit6" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(164, 441)
 
-[node name="BaseUnit7" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit7" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(115, 159)
 
-[node name="BaseUnit8" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit8" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(132, 254)
 
-[node name="BaseUnit9" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit9" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(109, 526)
 
-[node name="BaseUnit10" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit10" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(318, 559)
 
-[node name="BaseUnit11" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit11" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(425, 460)
 
-[node name="BaseUnit12" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit12" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(481, 335)
 
-[node name="BaseUnit13" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit13" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(501, 140)
 
-[node name="BaseUnit14" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit14" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(144, 338)
 
-[node name="BaseUnit15" parent="." instance=ExtResource("2_gngon")]
+[node name="BaseUnit15" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(223, 180)
 
-[node name="Enemy1" parent="." instance=ExtResource("2_gngon")]
+[node name="Enemy1" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(767, 185)
 team = 2
 body_color = Color(1, 0.376471, 0.309804, 1)
 
-[node name="Enemy2" parent="." instance=ExtResource("2_gngon")]
+[node name="Enemy2" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(728, 306)
 team = 2
 body_color = Color(1, 0.376471, 0.309804, 1)
 
-[node name="Enemy3" parent="." instance=ExtResource("2_gngon")]
+[node name="Enemy3" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(822, 435)
 team = 2
 body_color = Color(1, 0.376471, 0.309804, 1)
 
-[node name="Enemy4" parent="." instance=ExtResource("2_gngon")]
+[node name="Enemy4" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(806, 283)
 team = 2
 body_color = Color(1, 0.376471, 0.309804, 1)
 
-[node name="Enemy5" parent="." instance=ExtResource("2_gngon")]
+[node name="Enemy5" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(751, 391)
 team = 2
 body_color = Color(1, 0.376471, 0.309804, 1)
 
-[node name="Enemy6" parent="." instance=ExtResource("2_gngon")]
+[node name="Enemy6" parent="World" instance=ExtResource("2_gngon")]
 position = Vector2(850, 230)
 team = 2
 body_color = Color(1, 0.376471, 0.309804, 1)
