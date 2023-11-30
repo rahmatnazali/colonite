@@ -12,13 +12,13 @@
 [ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_attack.gd" id="9_rvnmy"]
 [ext_resource type="Script" path="res://components/unit/base_unit/base_unit_state_consume.gd" id="11_b00hq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ftc2b"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_oro61"]
 radius = 6.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0ev51"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_mbwe6"]
 radius = 8.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3j0ad"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ppdyy"]
 radius = 22.0907
 
 [node name="BaseUnit" type="CharacterBody2D"]
@@ -41,17 +41,17 @@ texture = ExtResource("3_ulfta")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource("CircleShape2D_ftc2b")
+shape = SubResource("CircleShape2D_oro61")
 
 [node name="AttackRange" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
-shape = SubResource("CircleShape2D_0ev51")
+shape = SubResource("CircleShape2D_mbwe6")
 
 [node name="ConsumeRange" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ConsumeRange"]
-shape = SubResource("CircleShape2D_3j0ad")
+shape = SubResource("CircleShape2D_ppdyy")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_opcn1")]
 unique_name_in_owner = true
