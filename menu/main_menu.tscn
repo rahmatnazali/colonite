@@ -91,77 +91,53 @@ target_scene = "res://menu/settings.tscn"
 
 [node name="Colies" type="Node2D" parent="Arena"]
 
-[node name="BaseUnitBig" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitBig" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(576, 181)
 rotation = -0.785398
 scale = Vector2(8.16001, 8.16001)
 should_move = false
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
 [node name="BaseUnitWhite1" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(399, 222)
 
-[node name="BaseUnitWhite2" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitWhite2" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(920, 393)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitWhite3" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitWhite3" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(344, 403)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitGreen1" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitGreen1" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(163, 531)
 body_color = Color(0.419608, 1, 0.517647, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitGreen2" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitGreen2" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(945, 144)
 body_color = Color(0.419608, 1, 0.517647, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitGreen3" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitGreen3" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(114, 91)
 body_color = Color(0.419608, 1, 0.517647, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitOrange1" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitOrange1" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(120, 289)
 body_color = Color(1, 0.733333, 0.254902, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitOrange2" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitOrange2" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(770, 571)
 body_color = Color(1, 0.733333, 0.254902, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitOrange3" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitOrange3" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(787, 83)
 body_color = Color(1, 0.733333, 0.254902, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitBlue1" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitBlue1" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(765, 250)
 body_color = Color(0.321569, 0.403922, 1, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitBlue2" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitBlue2" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(283, 85)
 body_color = Color(0.321569, 0.403922, 1, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
 
-[node name="BaseUnitBlue3" parent="Arena/Colies" node_paths=PackedStringArray("health_component", "attack_component") instance=ExtResource("6_v5gaa")]
+[node name="BaseUnitBlue3" parent="Arena/Colies" instance=ExtResource("6_v5gaa")]
 position = Vector2(423, 567)
 body_color = Color(0.321569, 0.403922, 1, 1)
-health_component = NodePath("../BaseUnitWhite1/HealthComponent")
-attack_component = NodePath("../BaseUnitWhite1/AttackComponent")
