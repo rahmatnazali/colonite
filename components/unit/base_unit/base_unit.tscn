@@ -21,11 +21,9 @@ radius = 8.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_3j0ad"]
 radius = 22.0907
 
-[node name="BaseUnit" type="CharacterBody2D" node_paths=PackedStringArray("health_component", "attack_component")]
+[node name="BaseUnit" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_bxnya")
-health_component = NodePath("HealthComponent")
-attack_component = NodePath("AttackComponent")
 
 [node name="Body" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
@@ -56,8 +54,10 @@ shape = SubResource("CircleShape2D_0ev51")
 shape = SubResource("CircleShape2D_3j0ad")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_opcn1")]
+unique_name_in_owner = true
 
 [node name="AttackComponent" parent="." instance=ExtResource("5_ilxeb")]
+unique_name_in_owner = true
 
 [node name="GenericStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("4_ghr87")

@@ -23,8 +23,8 @@ var current_speed: int
 @export var barrier_color = Color.GRAY
 
 
-@export var health_component: Node
-@export var attack_component: Node
+@onready var health_component: Node = %HealthComponent
+@onready var attack_component: Node = %AttackComponent
 
 
 @export var verbose_mode: bool = false
