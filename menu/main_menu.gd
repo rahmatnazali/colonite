@@ -43,9 +43,8 @@ func _on_setting_button_pressed():
 	get_tree().change_scene_to_file("res://menu/settings.tscn")
 
 
-# close on ESC
-func _unhandled_input(event):
-	if event is InputEventKey:
-		if event.pressed and event.keycode == KEY_ESCAPE:
-			get_tree().quit()
+func _process(_delta):
+	# close on esc
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()
 
