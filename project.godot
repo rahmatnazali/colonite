@@ -25,3 +25,7 @@ GlobalStatsManager="*res://globals/global_stats_manager.gd"
 [display]
 
 window/stretch/mode="canvas_items"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
